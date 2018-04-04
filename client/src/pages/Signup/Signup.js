@@ -1,5 +1,6 @@
 import React from "react";
 import "./Signup.css";
+import SubmitButton from "../../components/SubmitButton";
 
 class Signup extends React.Component {
   constructor(props) {
@@ -13,9 +14,10 @@ class Signup extends React.Component {
       dateOfBirth: ""
     };
   }
-  handleChange(event) {
+  handleChange = event => {
+    const { name, value } = event.target;
     this.setState({
-      [event.target.name]: event.target.value
+      [name]: value
     });
   }
 
@@ -85,7 +87,8 @@ class Signup extends React.Component {
                 </div>
               </div>
             </div>
-            <a class="waves-effect waves-light btn submit">Submit</a>
+            <SubmitButton />
+            {/* <a className="waves-effect waves-light btn submit">Submit</a> */}
           </div>
         
       

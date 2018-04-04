@@ -28,24 +28,21 @@ class Signup extends React.Component {
 
           <div className="col s9">
             <div className="input-field col s4">
-              <input id="first_name" type="text" className="validate" />
+              <input id="first_name" type="text" className="validate" autofocus/>
               <label for="first_name">First name</label>
             </div>
 
             <div className="input-field col s4">
-              <input id="first_name" type="text" className="validate" />
+              <input id="first_name" type="text" className="validate" autofocus />
               <label for="first_name">Last name</label>
             </div>
 
             <div className="input-field col l8">
-              <input id="phone" type="text" className="validate" />
-              <label for="first_name">Phone</label>
+              <input id="phone" type="text" className="validate" autofocus/>
+              <label for="phone">Phone</label>
             </div>
 
-            <div className="input-field col l8">
-                <input id="phone" type="text" className="validate" />
-                <label for="first_name">Phone</label>
-            </div>
+            
 
                 <div className="input-field col l8">
                   <input id="dateOfBirth" type="text" className="validate" />
@@ -63,8 +60,8 @@ class Signup extends React.Component {
                       <label for="email_inline">Email</label>
                       <span
                         className="helper-text"
-                        data-error="wrong"
-                        data-success="right"
+                        data-error="Please enter a valid email."
+                        data-success="valid"
                       >
                         Use your email to login next time
                       </span>
@@ -79,7 +76,7 @@ class Signup extends React.Component {
                       <span
                         className="helper-text"
                         data-error="wrong"
-                        data-success="right"
+                        data-success="valid"
                       >
                         Pick an easy password!
                       </span>

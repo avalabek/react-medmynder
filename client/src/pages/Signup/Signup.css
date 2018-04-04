@@ -7,7 +7,7 @@ h4 {
 
 }
 
-#firstName, #lastName, #phone, #email, #notes, #dateOfBirth, #password, label {
+#first_name, #last_name, #phone, #email_inline, #notes, #dateOfBirth, #password_inline, label {
   color: black;
   font-family: 'IBM Plex Sans',
   sans-serif;
@@ -27,14 +27,14 @@ form {
 /* label focus color */
 
 .input-field input:focus+label {
-  color: #4C191B !important;
+  color: navy !important;
 }
 
 /* label underline focus color */
 
 .row .input-field input:focus {
-  border-bottom: 1px solid #4C191B !important;
-  box-shadow: 0 1px 0 0 #4C191B !important
+  border-bottom: 1px solid navy !important;
+  box-shadow: 0 1px 0 0 navy !important
 }
 /* if you use placeholder text, here is how you change color */
 ::-webkit-input-placeholder {

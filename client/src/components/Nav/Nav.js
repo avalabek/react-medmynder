@@ -10,8 +10,7 @@ const Nav = () => (
           <span className="icon-bar" /> <span className="icon-bar" />
           <span className="icon-bar" />
         </button>
-        <a href="/" className="navbar-brand">
-          MedMYnder
+        <a href="/" className="navbar-brand">MedMYnder
         </a>
       </div>
     </div>

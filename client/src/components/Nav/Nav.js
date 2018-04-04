@@ -2,19 +2,27 @@ import React from "react";
 import "./Nav.css";
 
 const Nav = () => (
-  <nav className="navbar navbar-top">
-    <div className="container-fluid">
-      <div className="navbar-header">
-        <button type="button" className="collapsed navbar-toggle">
-          <span className="sr-only">Toggle navigation</span>
-          <span className="icon-bar" /> <span className="icon-bar" />
-          <span className="icon-bar" />
-        </button>
-        <a href="/" className="navbar-brand">MedMYnder
-        </a>
+  <div className="navbar-fixed header">
+    <nav>
+      <div className="nav-wrapper header">
+        {/* <a href="#!" className="brand-logo center"> */}
+          
+            
+          
+        
+          Med<strong>MY</strong>nder<a> <i className="fas fa-pills app-logo" /></a>
+        <ul className="right hide-on-med-and-down">
+          <li>
+           </li>
+          <li>
+            <a href="#">Putting you back in control of your own health.</a>
+          </li>
+         
+        </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
+  // <div className="navbar-header"><i class="fas fa-medkit" ></i>MedMYnder
 );
 
 export default Nav;

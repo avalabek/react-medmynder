@@ -1,6 +1,7 @@
 import React from "react";
 import "./Signup.css";
 import SubmitButton from "../../components/SubmitButton";
+import Input from "../../components/Input";
 
 class Signup extends React.Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class Signup extends React.Component {
               <input id="phone" type="text" className="validate" autofocus/>
               <label for="phone">Phone</label>
             </div>
-
+<Input />
             
 
                 <div className="input-field col l8">

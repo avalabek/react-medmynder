@@ -2,7 +2,7 @@ import React from "react";
 import "./Signup.css";
 import SubmitButton from "../../components/SubmitButton";
 import Input from "../../components/Input";
-
+//==does this page have state or not?
 class Signup extends React.Component {
   constructor(props) {
     super(props);
@@ -44,7 +44,7 @@ class Signup extends React.Component {
               <input id="phone" type="text" className="validate" autofocus/>
               <label for="phone">Phone</label>
             </div>
-<Input />
+            <Input label={this.props.label} />
             
 
                 <div className="input-field col l8">

@@ -23,8 +23,11 @@ class Signup extends React.Component {
       [name]: value
     });
   };
-  //   handleFormSubmit = event => {
-  //     event.preventDefault();
+  
+  handleFormSubmit = event => {
+       event.preventDefault();
+       document.getElementById("form").reset();
+       alert("Form submitted.")
   //     API.saveUser({
   //       firstName: this.state.firstName,
   //       lastName: this.state.lastName,
@@ -40,11 +43,11 @@ class Signup extends React.Component {
   //     .then(res=> this.loadUser())
   //     .catch(err => console.log(err));
   //   }
-  // };
+   };
 
   render() {
     return (
-      <form>
+      <form id="form">
         <br /> <br />
         <div className="row">
           <div className="col s3" />
@@ -71,34 +74,30 @@ class Signup extends React.Component {
             </div>
 
             {/* got the label to show but loses materialize styling */}
-            <label for="first_name" style={{ fontSize: "14px" }}>
-              BLAH!
-              <InlineInput />
-            </label>
-            <InlineInput />
-            <InlineInput />
-
-            <div className="input-field col l8">
-              <input id="phone" type="text" className="validate" autofocus />
-              <label for="phone">Phone</label>
-            </div>
             
+                        
             <Input
               value={this.state.phone}
               onChange={this.handleInputChange}
               name="Phone"
             />
-            {/* ?? where do i put the name property and also: question how do I get the label to change for each one */}
+            
             <Input
               value={this.state.dateOfBirth}
               onChange={this.handleInputChange}
-              name="dateOfBirth"
+              name="Date of birth"
             />
-
-            <div className="input-field col l8">
-              <input id="dateOfBirth" type="text" className="validate" />
-              <label for="dateOfBirth">Date of birth</label>
-            </div>
+            <Input
+              value={this.state.email}
+              onChange={this.handleInputChange}
+              name="Email"
+            />
+            <Input
+              value={this.state.password}
+              onChange={this.handleInputChange}
+              name="Password"
+            />
+            
 
             <div className="row">
               <div className="col s12">
@@ -132,7 +131,8 @@ class Signup extends React.Component {
             </div>
           </div>
         </div>
-        <SubmitButton />
+        <SubmitButton
+        onClick={this.handleFormSubmit} />
         {/* <a className="waves-effect waves-light btn submit">Submit</a> */}
       </form>
     );

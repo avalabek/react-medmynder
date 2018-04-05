@@ -2,7 +2,8 @@ import React from "react";
 import "./Signup.css";
 import SubmitButton from "../../components/SubmitButton";
 import Input from "../../components/Input";
-//==does this page have state or not?
+
+// import API from "../..utils/API";
 class Signup extends React.Component {
   constructor(props) {
     super(props);
@@ -10,21 +11,40 @@ class Signup extends React.Component {
       firstName: "",
       lastName: "",
       phone: "",
+      dateOfBirth: "",
       email: "",
-      password: "",
-      dateOfBirth: ""
+      password: ""
+      
     };
   }
-  handleChange = event => {
+  handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
   }
-
+//   handleFormSubmit = event => {
+//     event.preventDefault();
+//     API.saveUser({
+//       firstName: this.state.firstName,
+//       lastName: this.state.lastName,
+//       phone: this.state.phone,
+//       dateOfBirth: this.state.dateOfBirth,
+//       email: this.state.email,
+//       password: this.state. password
+//     })
+//     //what do we want to do here? prob redirect
+//     // user to the profile page? how to write
+//     // res redirect in es6 also need to clear page
+// here
+//     .then(res=> this.loadUser())
+//     .catch(err => console.log(err));
+//   }
+// };
+    
   render() {
     return (
-      <div>
+      <form>
         <br /> <br />
         <div className="row">
           <div className="col s3" />
@@ -44,8 +64,17 @@ class Signup extends React.Component {
               <input id="phone" type="text" className="validate" autofocus/>
               <label for="phone">Phone</label>
             </div>
-            <Input label={this.props.label} />
-            
+            <Input 
+              value={this.state.phone}
+              onChange={this.handleInputChange}
+              name="phone"
+               />
+{/* ?? where do i put the name property and also: question how do I get the label to change for each one */}
+            <Input
+              value={this.state.dateOfBirth}
+              onChange={this.handleInputChange}
+              name="dateOfBirth"
+            />
 
                 <div className="input-field col l8">
                   <input id="dateOfBirth" type="text" className="validate" />
@@ -90,7 +119,7 @@ class Signup extends React.Component {
             </div>
             <SubmitButton />
             {/* <a className="waves-effect waves-light btn submit">Submit</a> */}
-          </div>
+          </form>
         
       
     );

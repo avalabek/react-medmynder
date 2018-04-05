@@ -23,6 +23,10 @@ form {
   text-align: center;
 
 }
+input.validate{
+  color:navy;
+}
+
 /* If you want to change the underline color it is here */
 /* label focus color */
 
@@ -67,4 +71,7 @@ form {
 ::placeholder {
   /* Most modern browsers support this now. */
   color: #909;
+}
+validate{
+  color:blue;
 }

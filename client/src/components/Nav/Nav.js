@@ -6,18 +6,15 @@ const Nav = () => (
     <nav>
       <div className="nav-wrapper header">
         {/* <a href="#!" className="brand-logo center"> */}
-          
-            
-          
-        
-          Med<strong>MY</strong>nder<a> <i className="fas fa-pills app-logo" /></a>
+        Med<strong>MY</strong>nder<a>
+          {" "}
+          <i className="fas fa-pills app-logo" />
+        </a>
         <ul className="right hide-on-med-and-down">
-          <li>
-           </li>
+          <li />
           <li>
             <a href="#">Putting you back in control of your own health.</a>
           </li>
-         
         </ul>
       </div>
     </nav>

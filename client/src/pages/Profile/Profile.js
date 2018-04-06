@@ -14,6 +14,7 @@ import Card from "../../components/Card";
 import Row from "../../components/Row";
 import "./Profile.css";
 import DataCard from "../../components/DataCard";
+import Table from "../../components/Table";
 
 class Profile extends Component {
   constructor(props){
@@ -103,59 +104,17 @@ class Profile extends Component {
         <br /><br /><br />
       <div className="container">
       <div className="row">
-      <div className="col m12">
+      {/* <div className="col m12"> */}
         <Card />
+        {/* <DataCard /> */}
         <DataCard />
-        </div>
-        </div>
-        </div>
-        <form>
-          <br />
-          <div className="row">
-            
-              {/* <div className="col s9"> */}
-              <Input
-                value={this.state.medicine}
-                onChange={this.handleInputChange}
-                name="medicine"
-                label="Medicine" 
-                />
-              <Input 
-                value={this.state.indication}
-                onChange={this.handleInputChange}
-                name="indication"
-                label="For" 
-              />
-              <Input 
-                value={this.state.dosage}
-                onChange={this.handleInputChange}
-                name="dosage"
-                label="Dosage" 
-              />
-              <Input 
-                value={this.state.frequency}
-                onChange={this.handleInputChange}
-                name="frequency"
-                label="Frequency" 
-              />
-              <Input
-                value={this.state.notes}
-                onChange={this.handleInputChange}
-                name="notes"
-                label="Notes"
-              />
+        <Table />
               <SubmitButton />
-              <div className="col s4" >
-              <Input label="Here is the col" />
-              <Input label="And another one" />
-              <Input label="But why here" />
-              <Card />
-              
-               </div>
-            </div>
-          </form>
         </div>
-    
+        </div>
+        </div>
+        // </div>
+        
       
     );
   }

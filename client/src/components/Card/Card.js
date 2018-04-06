@@ -1,8 +1,10 @@
 import React from "react";
 // import Label from "../Label";
 import Input from "../../components/Input";
+import SubmitButton from "../../components/SubmitButton";
 
 export const Card = props => (
+  
 <div className="col m6">
   <div className="card large">
     <div className="card-content">
@@ -11,6 +13,7 @@ export const Card = props => (
       <Input label="Dosage" />
       <Input label="Time" />
       <Input label="Notes:make a bigger input" />
+      
     </div>
     {/* <div className="card-tabs">
       <ul className="tabs tabs-fixed-width">

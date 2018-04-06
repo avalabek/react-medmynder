@@ -5,64 +5,101 @@ import React, { Component } from "react";
 // import { Col, Row, Container } from "../../components/Grid";
 // import { List, ListItem } from "../../components/List";
 // import { Input, TextArea, FormBtn } from "../../components/Form";
-import Nav from '../../components/Nav'
+import Nav from '../../components/Nav';
+import Jumbotron from '../../components/Jumbotron';
+import Input from '../../components/Input';
+import SubmitButton from '../../components/SubmitButton';
 
-class Books extends Component {
-  // Setting our component's initial state
-  state = {
-    books: [],
-    title: "",
-    author: "",
-    synopsis: ""
+class Profile extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      medicine: "",
+      for: "",
+      dosage: "",
+      frequency: "",
+      notes: ""
+        
+    };
+  }
+  handleInputChange = event => {
+    const {name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
   };
+  
+  
 
-  // When the component mounts, load all books and save them to this.state.books
+  // When the component mounts, load all meds 
   // componentDidMount() {
-  //   this.loadBooks();
+  //   this.loadMeds();
   // }
 
-  // // Loads all books  and sets them to this.state.books
-  // loadBooks = () => {
-  //   API.getBooks()
+  // // Loads all meds and sets them to this.state.meds
+  // loadMeds = () => {
+  //   API.getMeds()
   //     .then(res =>
-  //       this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+  //       this.setState({ 
+  //   medicine: res.data, 
+  //   for: "", 
+  //   dosage: "", 
+  //   frequency: "",
+        // notes: ""
+  //  })
   //     )
   //     .catch(err => console.log(err));
   // };
 
-  // // Deletes a book from the database with a given id, then reloads books from the db
-  // deleteBook = id => {
-  //   API.deleteBook(id)
-  //     .then(res => this.loadBooks())
+  // // Deletes a med from the database with a given id, then reloads books from the db
+  // deleteMed = id => {
+  //   API.deleteMed(id)
+  //     .then(res => this.loadMeds())
   //     .catch(err => console.log(err));
   // };
 
-  // // Handles updating component state when the user types into the input field
-  // handleInputChange = event => {
-  //   const { name, value } = event.target;
-  //   this.setState({
-  //     [name]: value
-  //   });
-  // };
+  
 
   // // When the form is submitted, use the API.saveBook method to save the book data
   // // Then reload books from the database
+  
   // handleFormSubmit = event => {
   //   event.preventDefault();
-  //   if (this.state.title && this.state.author) {
-  //     API.saveBook({
-  //       title: this.state.title,
-  //       author: this.state.author,
-  //       synopsis: this.state.synopsis
+  //   
+  //     API.saveMed({
+  //       medicine: this.state.medicine,
+  //       for: this.state.for,
+  //       dosage: this.state.synopsis,
+  //      frequency: this.state.frequency,
+  //      notes: this.state.notes
   //     })
-  //       .then(res => this.loadBooks())
+  //       .then(res => this.loadMeds())
   //       .catch(err => console.log(err));
   //   }
   // };
+  // Replace the code below the code above once backend up
+  handleFormSubmit = event => {
+    event.preventDefault();
+    this.setState({
+      medicine: "",
+      for: "",
+      dosage: "",
+      frequency: "",
+      notes: ""
+    });
+  }
 
   render() {
     return (
-      <Nav />
+      <div>
+      
+      <Jumbotron />
+      <Input />
+      <Input />
+      <Input />
+      <Input />
+      <SubmitButton />
+      </div>
       // <Container fluid>
       //   <Row>
       //     <Col size="md-6">
@@ -125,4 +162,4 @@ class Books extends Component {
   }
 }
 
-export default Books;
+export default Profile;

@@ -3,6 +3,8 @@ import "./Signup.css";
 import SubmitButton from "../../components/SubmitButton";
 import Input from "../../components/Input";
 import InlineInput from "../../components/InlineInput";
+import Jumbotron from "../../components/Jumbotron";
+import Profile from "../../pages/Profile";
 
 // import API from "../..utils/API";
 class Signup extends React.Component {
@@ -57,56 +59,32 @@ class Signup extends React.Component {
 
   render() {
     return (
-      <form id="form">
-        <br /> <br />
+      <form>
+        <br /> 
         <div className="row">
           <div className="col s3" />
 
           <div className="col s9">
-            <div className="input-field col s4">
-              <input
-                id="first_name"
-                type="text"
-                className="validate"
-                autofocus
-              />
-              <label for="first_name">First name</label>
-            </div>
-
-            <div className="input-field col s4">
-              <input
-                id="first_name"
-                type="text"
-                className="validate"
-                autofocus
-              />
-              <label for="first_name">Last name</label>
-            </div>
-
-            {/* got the label to show but loses materialize styling */}
+                        
             <Input
               value={this.state.firstName}
               onChange={this.handleInputChange}
               name="firstName"
               label="First name"
-
             />
             <Input
               value={this.state.lastName}
               onChange={this.handleInputChange}
               name="lastName"
               label="Last name"
-
             />         
             <Input
               value={this.state.phone}
               onChange={this.handleInputChange}
               name="phone"
               label="Phone"
-              
-            />
-            
-            
+              />
+                    
             <Input
               value={this.state.dateOfBirth}
               onChange={this.handleInputChange}
@@ -118,51 +96,23 @@ class Signup extends React.Component {
               onChange={this.handleInputChange}
               name="email"
               label="Email"
+              type="email"
             />
             <Input
               value={this.state.password}
               onChange={this.handleInputChange}
               name="password"
               label="Password"
-            />
-            
-
-            <div className="row">
-              <div className="col s12">
-                <div className="input-field inline col s4">
-                  <input id="email_inline" type="email" className="validate" />
-                  <label for="email_inline">Email</label>
-                  <span
-                    className="helper-text"
-                    data-error="Please enter a valid email."
-                    data-success="valid"
-                  >
-                    Use your email to login next time
-                  </span>
-                </div>
-                <div className="input-field inline col s4">
-                  <input
-                    id="password_inline"
-                    type="text"
-                    className="validate"
-                  />
-                  <label for="password_inline">Choose a password</label>
-                  <span
-                    className="helper-text"
-                    data-error="wrong"
-                    data-success="valid"
-                  >
-                    Pick an easy password!
-                  </span>
-                </div>
-              </div>
-            </div>
+              /> 
+                 
+           
+          
           </div>
         </div>
         <SubmitButton
         onClick={this.handleFormSubmit} />
-        {/* <a className="waves-effect waves-light btn submit">Submit</a> */}
-      </form>
+        <Profile />
+     </form>   
     );
   }
 }

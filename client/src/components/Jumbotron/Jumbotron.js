@@ -5,18 +5,20 @@ import React, { Component } from 'react';
 const jumbotronStyle = {
   paddingBottom: '150px',
   boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)"
+  
 }
 
 class Jumbotron extends Component {
   render() {
     return (
-      <div className="card-panel red lighten-2" style={jumbotronStyle}>
+      <div className="card-panel grey lighten-3" style={jumbotronStyle}>
         
-        <div className="col l6" />
-        <div className="col l6">
-          <h1>Here's what you need to take today</h1>
+       <div className ="container">
+        <div className="col l2">
+          <h1>What do you need to take today?</h1>
           <p>Lorem ipsum dolor sit amet, consectetur...</p>
         </div>
+      </div>
       </div>
       
       

@@ -82,82 +82,65 @@ class Profile extends Component {
     event.preventDefault();
     this.setState({
       medicine: "",
-      for: "",
+      indication: "",
       dosage: "",
       frequency: "",
       notes: ""
     });
-  }
+    alert("Form submitted.")
+  };
 
   render() {
     return (
+      
       <div>
       
-      <Jumbotron />
-      <Input />
-      <Input />
-      <Input />
-      <Input />
-      <SubmitButton />
-      </div>
-      // <Container fluid>
-      //   <Row>
-      //     <Col size="md-6">
-      //       <Jumbotron>
-      //         <h1>What Books Should I Read?</h1>
-      //       </Jumbotron>
-      //       <form>
-      //         <Input
-      //           value={this.state.title}
-      //           onChange={this.handleInputChange}
-      //           name="title"
-      //           placeholder="Title (required)"
-      //         />
-      //         <Input
-      //           value={this.state.author}
-      //           onChange={this.handleInputChange}
-      //           name="author"
-      //           placeholder="Author (required)"
-      //         />
-      //         <TextArea
-      //           value={this.state.synopsis}
-      //           onChange={this.handleInputChange}
-      //           name="synopsis"
-      //           placeholder="Synopsis (Optional)"
-      //         />
-      //         <FormBtn
-      //           disabled={!(this.state.author && this.state.title)}
-      //           onClick={this.handleFormSubmit}
-      //         >
-      //           Submit Book
-      //         </FormBtn>
-      //       </form>
-      //     </Col>
-      //     <Col size="md-6 sm-12">
-      //       <Jumbotron>
-      //         <h1>Books On My List</h1>
-      //       </Jumbotron>
-      //       {this.state.books.length ? (
-      //         <List>
-      //           {this.state.books.map(book => {
-      //             return (
-      //               <ListItem key={book._id}>
-      //                 <a href={"/books/" + book._id}>
-      //                   <strong>
-      //                     {book.title} by {book.author}
-      //                   </strong>
-      //                 </a>
-      //                 <DeleteBtn onClick={() => this.deleteBook(book._id)} />
-      //               </ListItem>
-      //             );
-      //           })}
-      //         </List>
-      //       ) : (
-      //         <h3>No Results to Display</h3>
-      //       )}
-      //     </Col>
-      //   </Row>
-      // </Container>
+        <Jumbotron />
+        <form>
+          <br />
+          <div className="row">
+            
+              {/* <div className="col s9"> */}
+              <Input
+                value={this.state.medicine}
+                onChange={this.handleInputChange}
+                name="medicine"
+                label="Medicine" 
+                />
+              <Input 
+                value={this.state.indication}
+                onChange={this.handleInputChange}
+                name="indication"
+                label="For" 
+              />
+              <Input 
+                value={this.state.dosage}
+                onChange={this.handleInputChange}
+                name="dosage"
+                label="Dosage" 
+              />
+              <Input 
+                value={this.state.frequency}
+                onChange={this.handleInputChange}
+                name="frequency"
+                label="Frequency" 
+              />
+              <Input
+                value={this.state.notes}
+                onChange={this.handleInputChange}
+                name="notes"
+                label="Notes"
+              />
+              <SubmitButton />
+              <div className="col s4" >
+              <Input />
+              </div>
+               </div>
+            {/* </div> */}
+          </form>
+        </div>
+    
+      
     );
   }
 }

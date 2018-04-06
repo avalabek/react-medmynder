@@ -13,14 +13,17 @@ const Nav = () => (
         <ul className="right hide-on-med-and-down">
           <li />
           <li>
-            <a href="/" />
+            <a href="/profile">Putting you back in control of your own health.</a>
           </li>
+        
+          <li>
+            <a href="/">Login</a>
+          </li>
+          
           <li>
             <a href="/signup">REGISTER</a>
           </li>
-          <li>
-            <a href="/profile">Putting you back in control of your own health.</a>
-          </li>
+         
         </ul>
       </div>
     </nav>

@@ -26,7 +26,16 @@ class Signup extends React.Component {
   
   handleFormSubmit = event => {
        event.preventDefault();
-       document.getElementById("form").reset();
+      //  document.getElementById("form").reset();
+    this.setState({
+      firstName: "",
+      lastName: "",
+      phone: "",
+      dateOfBirth: "",
+      email: "",
+      password: ""
+    });
+;
        
        alert("Form submitted.")
   //     API.saveUser({
@@ -75,12 +84,25 @@ class Signup extends React.Component {
             </div>
 
             {/* got the label to show but loses materialize styling */}
-            
-                        
+            <Input
+              value={this.state.firstName}
+              onChange={this.handleInputChange}
+              name="firstName"
+              label="First name"
+
+            />
+            <Input
+              value={this.state.lastName}
+              onChange={this.handleInputChange}
+              name="lastName"
+              label="Last name"
+
+            />         
             <Input
               value={this.state.phone}
               onChange={this.handleInputChange}
               name="phone"
+              label="Phone"
               
             />
             
@@ -89,16 +111,19 @@ class Signup extends React.Component {
               value={this.state.dateOfBirth}
               onChange={this.handleInputChange}
               name="dateOfBirth"
+              label="Date of birth"
             />
             <Input
               value={this.state.email}
               onChange={this.handleInputChange}
               name="email"
+              label="Email"
             />
             <Input
               value={this.state.password}
               onChange={this.handleInputChange}
               name="password"
+              label="Password"
             />
             
 

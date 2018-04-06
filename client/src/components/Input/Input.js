@@ -6,10 +6,8 @@ export const Input = props => (
     <input 
       id="phone" 
       type="text" 
-      className="validate" autofocus 
-      {...props} 
-      />
-    <label for="phone">{props.name}</label>
+      className="validate" autofocus {...props} />
+    <label for="phone">{props.label}</label>
   </div>
 );
 export default Input;

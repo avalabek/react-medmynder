@@ -13,6 +13,7 @@ import Col from "../../components/Col";
 import Card from "../../components/Card";
 import Row from "../../components/Row";
 import "./Profile.css";
+import DataCard from "../../components/DataCard";
 
 class Profile extends Component {
   constructor(props){
@@ -104,7 +105,7 @@ class Profile extends Component {
       <div className="row">
       <div className="col m12">
         <Card />
-        <Card />
+        <DataCard />
         </div>
         </div>
         </div>

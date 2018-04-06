@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
+import './Landing.css';
 
-import Books from '../../pages/Books';
-import Signup from '../../pages/Signup';
-import Nav from '../../components/Nav';
-import Input from '../../components/Input';
 
 
 class Landing extends Component {
@@ -11,9 +8,8 @@ class Landing extends Component {
     return (
       
         <div>
-          <Nav />
-         <Input />
-         <Input />
+        <br /><br /><br /><br />
+         <h1>Welcome.</h1>
 
         </div>
       

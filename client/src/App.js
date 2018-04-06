@@ -4,6 +4,7 @@ import './App.css';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import Profile from './pages/Profile';
+import Landing from './pages/Landing';
 
 
 class App extends Component {
@@ -15,7 +16,7 @@ class App extends Component {
           
           <Route exact path="/" component={Signup} />
           <Route exact path="/profile" component={Profile} />
-          
+          <Route exact path="/landing" component={Landing} />
           
       </div>
        </Router>

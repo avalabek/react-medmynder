@@ -9,6 +9,10 @@ import Nav from '../../components/Nav';
 import Jumbotron from '../../components/Jumbotron';
 import Input from '../../components/Input';
 import SubmitButton from '../../components/SubmitButton';
+import Col from "../../components/Col";
+import Card from "../../components/Card";
+import Row from "../../components/Row";
+import "./Profile.css";
 
 class Profile extends Component {
   constructor(props){
@@ -94,8 +98,16 @@ class Profile extends Component {
     return (
       
       <div>
-      
-        <Jumbotron />
+       
+        <br /><br /><br />
+      <div className="container">
+      <div className="row">
+      <div className="col m12">
+        <Card />
+        <Card />
+        </div>
+        </div>
+        </div>
         <form>
           <br />
           <div className="row">
@@ -133,10 +145,13 @@ class Profile extends Component {
               />
               <SubmitButton />
               <div className="col s4" >
-              <Input />
-              </div>
+              <Input label="Here is the col" />
+              <Input label="And another one" />
+              <Input label="But why here" />
+              <Card />
+              
                </div>
-            {/* </div> */}
+            </div>
           </form>
         </div>
     

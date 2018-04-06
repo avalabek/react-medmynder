@@ -10,7 +10,7 @@ class Landing extends Component {
         <div>
         <br /><br /><br /><br />
          <h1>Welcome.</h1>
-
+        
         </div>
       
     );

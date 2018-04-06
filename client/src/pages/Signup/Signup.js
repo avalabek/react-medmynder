@@ -27,6 +27,7 @@ class Signup extends React.Component {
   handleFormSubmit = event => {
        event.preventDefault();
        document.getElementById("form").reset();
+       
        alert("Form submitted.")
   //     API.saveUser({
   //       firstName: this.state.firstName,
@@ -79,23 +80,25 @@ class Signup extends React.Component {
             <Input
               value={this.state.phone}
               onChange={this.handleInputChange}
-              name="Phone"
+              name="phone"
+              
             />
+            
             
             <Input
               value={this.state.dateOfBirth}
               onChange={this.handleInputChange}
-              name="Date of birth"
+              name="dateOfBirth"
             />
             <Input
               value={this.state.email}
               onChange={this.handleInputChange}
-              name="Email"
+              name="email"
             />
             <Input
               value={this.state.password}
               onChange={this.handleInputChange}
-              name="Password"
+              name="password"
             />
             
 

@@ -15,6 +15,7 @@ import Row from "../../components/Row";
 import "./Profile.css";
 import DataCard from "../../components/DataCard";
 import Table from "../../components/Table";
+import RadioButtons from "../../components/RadioButtons";
 
 class Profile extends Component {
   constructor(props){
@@ -108,8 +109,8 @@ class Profile extends Component {
         <Card />
         {/* <DataCard /> */}
         <DataCard />
-        <Table />
-              <SubmitButton />
+            <SubmitButton />
+        <RadioButtons />      
         </div>
         </div>
         </div>

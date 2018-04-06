@@ -2,6 +2,7 @@ import React from "react";
 // import Label from "../Label";
 import Input from "../../components/Input";
 import SubmitButton from "../../components/SubmitButton";
+import RadioButtons from "../../components/RadioButtons";
 
 export const Card = props => (
   
@@ -11,9 +12,9 @@ export const Card = props => (
       <Input label="Medication"/>
       <Input label="For" />
       <Input label="Dosage" />
-      <Input label="Time" />
       <Input label="Notes:make a bigger input" />
       
+      <RadioButtons />
     </div>
     {/* <div className="card-tabs">
       <ul className="tabs tabs-fixed-width">

@@ -1,36 +1,40 @@
 import React, { Component } from "react";
 
-class Table extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      medicine: "",
-      for: "",
-      dosage: "",
-      frequency: "",
-      notes: ""
+//question: this is both in profile page and here, so there is unnecessary duplication
+//does that mean that it should only be in profile page, but how can the child(table)
+// access the state from the user inputs.
 
-    };
-  }
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
+class Table extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     medicine: "",
+  //     for: "",
+  //     dosage: "",
+  //     frequency: "",
+  //     notes: ""
+
+  //   };
+  // }
+  // handleInputChange = event => {
+  //   const { name, value } = event.target;
+  //   this.setState({
+  //     [name]: value
+  //   });
+  // };
 //commented out code at bottom of file may go here??
 
-  handleFormSubmit = event => {
-    event.preventDefault();
-    this.setState({
-      medicine: "",
-      indication: "",
-      dosage: "",
-      frequency: "",
-      notes: ""
-    });
-    alert("Form submitted.")
-  };
+  // handleFormSubmit = event => {
+  //   event.preventDefault();
+  //   this.setState({
+  //     medicine: "",
+  //     indication: "",
+  //     dosage: "",
+  //     frequency: "",
+  //     notes: ""
+  //   });
+  //   alert("Form submitted.")
+  // };
 
   render() {
     return (
@@ -48,7 +52,7 @@ class Table extends Component {
 
   <tbody>
     <tr>
-      <td>Alvin</td>
+      <td>STATE here</td>
       <td>Eclair</td>
       <td>$0.87</td>
             <td>$0.87</td>

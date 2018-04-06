@@ -60,6 +60,7 @@ class Signup extends React.Component {
   render() {
     return (
       <form>
+        
         <br /> 
         <div className="row">
           <div className="col s3" />

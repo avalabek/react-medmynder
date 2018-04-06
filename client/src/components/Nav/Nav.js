@@ -5,7 +5,7 @@ const Nav = () => (
   <div className="navbar-fixed header">
     <nav>
       <div className="nav-wrapper header">
-        {/* <a href="#!" className="brand-logo center"> */}
+         <a href="/" className="brand-logo center" />
         Med<strong>MY</strong>nder<a>
           {" "}
           <i className="fas fa-pills app-logo" />
@@ -13,7 +13,13 @@ const Nav = () => (
         <ul className="right hide-on-med-and-down">
           <li />
           <li>
-            <a href="#">Putting you back in control of your own health.</a>
+            <a href="/" />
+          </li>
+          <li>
+            <a href="/signup">REGISTER</a>
+          </li>
+          <li>
+            <a href="/profile">Putting you back in control of your own health.</a>
           </li>
         </ul>
       </div>

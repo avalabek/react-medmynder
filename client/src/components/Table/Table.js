@@ -55,25 +55,25 @@ class Table extends Component {
 
   <tbody>
     <tr>
-      <td>STATE here</td>
-      <td>Eclair</td>
-      <td>$0.87</td>
-            <td>$0.87</td>
-            <td>$0.87</td>
+              <td>Lotensin</td>
+      <td>blood pressure</td>
+      <td>1</td>
+            <td>twice</td>
+            <td>blue</td>
     </tr>
     <tr>
-      <td>Alan</td>
-      <td>Jellybean</td>
-      <td>$3.76</td>
-            <td>$0.87</td>
-            <td>$0.87</td>
+              <td>Voltaren</td>
+      <td>inflammation</td>
+      <td>1</td>
+            <td>once</td>
+            <td>this works!</td>
     </tr>
     <tr>
-      <td>Jonathan</td>
-      <td>Lollipop</td>
-      <td>$7.00</td>
-            <td>$0.87</td>
-            <td>$0.87</td>
+              <td>Ciprofolxacin</td>
+      <td>antibiotic</td>
+      <td>strep throat</td>
+            <td>three times</td>
+            <td>upsets my stomach</td>
     </tr>
   </tbody>
 </table>

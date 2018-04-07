@@ -1,11 +1,18 @@
 import React from "react";
 
 export const SubmitButton = props => (
-  <button {...props} className="waves-effect waves-light btn-large" type="submit" name="action" style={{ fontFamily:'IBM Plex Sans'}}message="message">
+  <button
+    {...props}
+    className="waves-effect waves-light btn-large"
+    type="submit"
+    name="action"
+    style={{ fontFamily: "IBM Plex Sans" }}
+    message="message"
+    
+  >
     Submit<i class="material-icons right">send</i>
     {props.children}
   </button>
 );
 
 export default SubmitButton;
-

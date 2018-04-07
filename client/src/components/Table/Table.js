@@ -41,12 +41,12 @@ class Table extends Component {
     return (
 <div>
         <br />
-      <table>
+        <table className="responsive-table">
         
         <thead>
           <tr>
             <th>Medicine</th>
-            <th>For</th>
+            <th>Indication</th>
             <th>Dosage</th>
             <th>Frequency</th>
             <th>Notes</th>

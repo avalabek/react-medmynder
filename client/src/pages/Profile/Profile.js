@@ -109,6 +109,7 @@ class Profile extends Component {
         <Card />
         {/* <DataCard /> */}
         <DataCard />
+            
             <SubmitButton />
             
         </div>

@@ -8,6 +8,8 @@ export const DataCard = props => (
   <div className="col m6">
     <div className="card">
       <div className="card-content">
+        
+      
         <Table />
         
       </div>

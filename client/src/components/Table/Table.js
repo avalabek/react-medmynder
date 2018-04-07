@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Table.css";
 
 //question: this is both in profile page and here, so there is unnecessary duplication
 //does that mean that it should only be in profile page, but how can the child(table)
@@ -38,8 +39,10 @@ class Table extends Component {
 
   render() {
     return (
-
+<div>
+        <br />
       <table>
+        
         <thead>
           <tr>
             <th>Medicine</th>
@@ -74,6 +77,7 @@ class Table extends Component {
     </tr>
   </tbody>
 </table>
+</div>
     )
 }
 }

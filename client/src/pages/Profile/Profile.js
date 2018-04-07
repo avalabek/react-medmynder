@@ -102,7 +102,7 @@ class Profile extends Component {
       
       <div>
        
-        <br /><br /><br />
+        <br />
       <div className="container">
       <div className="row">
       {/* <div className="col m12"> */}
@@ -110,7 +110,7 @@ class Profile extends Component {
         {/* <DataCard /> */}
         <DataCard />
             <SubmitButton />
-        <RadioButtons />      
+            
         </div>
         </div>
         </div>

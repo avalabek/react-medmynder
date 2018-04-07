@@ -2,7 +2,7 @@ import React from "react";
 // import Label from "../Label";
 
 export const Input = props => (
-  <div className="input-field col l8">
+  <div className="input-field col m12">
     <input 
       id="phone" 
       type="text" 

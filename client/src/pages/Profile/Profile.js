@@ -104,6 +104,7 @@ class Profile extends Component {
        
         <br />
       <div className="container">
+      
       <div className="row">
       {/* <div className="col m12"> */}
         <Card />

@@ -13,7 +13,7 @@ module.exports = {
   //     .findById(req.params.id)
   //     .then(dbModel => res.json(dbModel))
   //     .catch(err => res.status(422).json(err));
-  // },
+  // }, //don't need right now, but will keep just in case
    
   create: function (req, res) {
     console.log(req.body)

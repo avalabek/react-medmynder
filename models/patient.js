@@ -19,7 +19,7 @@ const patientSchema = new Schema({
   // age: {
   //   type: Number,
   //   required: true
-  // }, y tho
+  // }, can be calculated from dob
   phone: {
     type: Number,
     required: true
@@ -32,7 +32,7 @@ const patientSchema = new Schema({
   // },
   // allergies: {
   //   type: String
-  // },
+  // }, will work on these after we finish our MVP
   medicines: [{
     type: Schema.Types.ObjectId, ref: 'Medicine'
   }]  

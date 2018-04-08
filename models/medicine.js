@@ -20,7 +20,7 @@ const medicineSchema = new Schema({
     patient: {
         type: Schema.Types.ObjectId,
         ref: 'Patient'
-    }
+    } //referencing the Patient model
 });
 
 const Medicine = mongoose.model("Medicine", medicineSchema);

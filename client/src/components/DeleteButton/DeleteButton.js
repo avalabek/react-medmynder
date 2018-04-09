@@ -4,7 +4,14 @@ import "./DeleteButton.css";
 
 const DeleteButton = props => (
 
-  <a className="waves-effect waves-red btn-flat" id="delete"{...props}>✗</a>
+  <a 
+  className="waves-effect waves-red btn-flat" 
+  id="delete"
+  
+  {...props}
+  >
+  ✗
+  </a>
  
 );
 

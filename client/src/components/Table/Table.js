@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Table.css";
-import DeleteButton from  "../../components/DeleteButton";
+import DeleteButton from "../../components/DeleteButton";
 
 //question: this is both in profile page and here, so there is unnecessary duplication
 //does that mean that it should only be in profile page, but how can the child(table)
@@ -24,7 +24,7 @@ class Table extends Component {
   //     [name]: value
   //   });
   // };
-//commented out code at bottom of file may go here??
+  //commented out code at bottom of file may go here??
 
   // handleFormSubmit = event => {
   //   event.preventDefault();
@@ -40,89 +40,85 @@ class Table extends Component {
 
   render() {
     return (
-<div>
+      <div>
         <br />
         <table className="responsive-table">
-        
-        <thead>
-          <tr>
-            
-            <th>Medicine</th>
-            <th>Indication</th>
-            <th>Dosage</th>
-            <th>Frequency</th>
-            <th>Notes</th>
+          <thead>
+            <tr>
+              <th>Medicine</th>
+              <th>Indication</th>
+              <th>Dosage</th>
+              <th>Frequency</th>
+              <th>Notes</th>
               <th>Delete</th>
-          </tr>
-        </thead>
+            </tr>
+          </thead>
 
-  <tbody>
-    <tr>
-              
+          <tbody>
+            <tr>
               <td>Lotensin</td>
-      <td>blood pressure</td>
-      <td>1</td>
-            <td>twice</td>
-            <td>blue</td>
-              
-              <DeleteButton 
-              // onClick={() => this.deleteMedicine(medicine._id)} 
+              <td>blood pressure</td>
+              <td>1</td>
+              <td>twice</td>
+              <td>blue</td>
+
+              <DeleteButton
+              // onClick={() => this.deleteMedicine(medicine._id)}
               />
               {/* <a className="waves-effect waves-red btn-small btn-flat"><i class="material-icons">delete forever</i></a> */}
               {/* <a href="#" data-activates="mobile-demo" className="right button-collapse"><i class="material-icons">delete forever</i></a> */}
-    </tr>
-    <tr>
+            </tr>
+            <tr>
               <td>Voltaren</td>
-      <td>inflammation</td>
-      <td>1</td>
-            <td>once</td>
-            <td>this works!</td>
-              <DeleteButton 
-              // onClick={() => this.deleteMedicine(medicine._id)} 
+              <td>inflammation</td>
+              <td>1</td>
+              <td>once</td>
+              <td>this works!</td>
+              <DeleteButton
+              // onClick={() => this.deleteMedicine(medicine._id)}
               />
-    </tr>
-    <tr>
+            </tr>
+            <tr>
               <td>Ciprofolxacin</td>
-      <td>antibiotic</td>
-      <td>strep throat</td>
-            <td>three times</td>
-            <td>upsets my stomach</td>
-              <DeleteButton 
-              // onClick={() => this.deleteMedicine(medicine._id)} 
+              <td>antibiotic</td>
+              <td>strep throat</td>
+              <td>three times</td>
+              <td>upsets my stomach</td>
+              <DeleteButton
+              // onClick={() => this.deleteMedicine(medicine._id)}
               />
-    </tr>
-  </tbody>
-</table>
-</div>
-    )
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    );
+  }
 }
-}
-  export default Table;
+export default Table;
 // does the below go here or in profile page component?
-  // When the component mounts, load all meds 
-  // componentDidMount() {
-  //   this.loadMeds();
-  // }
+// When the component mounts, load all meds
+// componentDidMount() {
+//   this.loadMeds();
+// }
 
-  // // Loads all meds and sets them to this.state.meds
-  // loadMeds = () => {
-  //   API.getMeds()
-  //     .then(res =>
-  //       this.setState({ 
-  //   medicine: res.data, 
-  //   for: "", 
-  //   dosage: "", 
-  //   frequency: "",
-        // notes: ""
-  //  })
-  //     )
-  //     .catch(err => console.log(err));
-  // };
+// // Loads all meds and sets them to this.state.meds
+// loadMeds = () => {
+//   API.getMeds()
+//     .then(res =>
+//       this.setState({
+//   medicine: res.data,
+//   for: "",
+//   dosage: "",
+//   frequency: "",
+// notes: ""
+//  })
+//     )
+//     .catch(err => console.log(err));
+// };
 
-  // // Deletes a med from the database with a given id, then reloads books from the db
-  // deleteMed = id => {
-  //   API.deleteMed(id)
-  //     .then(res => this.loadMeds())
-  //     .catch(err => console.log(err));
-  // };
-
+// // Deletes a med from the database with a given id, then reloads books from the db
+// deleteMed = id => {
+//   API.deleteMed(id)
+//     .then(res => this.loadMeds())
+//     .catch(err => console.log(err));
+// };

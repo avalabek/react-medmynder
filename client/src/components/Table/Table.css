@@ -1,11 +1,10 @@
 table {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   width: 300px;
-  
 }
 
-
-th, tr {
-  font-size:12px;
+th,
+tr {
+  font-size: 12px;
   /* padding-right:20px; */
 }

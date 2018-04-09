@@ -103,20 +103,20 @@ class Profile extends Component {
       <div>
        
         <br />
-      <div className="container">
+        <div className="container">
       
-      <div className="row">
-      {/* <div className="col m12"> */}
-        <Card />
-        {/* <DataCard /> */}
-        <DataCard />
+          <div className="row">
+            {/* <div className="col m12"> */}
+            <Card />
+             {/* <DataCard /> */}
+              <DataCard />
             
-            <SubmitButton />
+             <SubmitButton />
             
             
+          </div>
         </div>
-        </div>
-        </div>
+     </div>
         // </div>
         
       

@@ -11,13 +11,14 @@ export const Card = props => (
   <div className="card">
     <div className="card-content">
     <h4>Add a new medication</h4>
-      <Input label="Medication"/>
-      <Input label="For" />
-      <Input label="Dosage" />
+      <Input label="Medication Name"/>
+      <Input label="What It's For"/>
+      <Input label="Dosage"/>
       
       
       <RadioButtons />
-        <Input label="Notes:make a bigger input" />
+      <Input label="Special Instructions You Want To Be Reminded About"/>
+      <Input label="Additional Notes" />
     </div>
     {/* <div className="card-tabs">
       <ul className="tabs tabs-fixed-width">

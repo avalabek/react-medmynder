@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Table.css";
+import DeleteButton from "../../components/DeleteButton";
 
 //question: this is both in profile page and here, so there is unnecessary duplication
 //does that mean that it should only be in profile page, but how can the child(table)
@@ -23,7 +24,7 @@ class Table extends Component {
   //     [name]: value
   //   });
   // };
-//commented out code at bottom of file may go here??
+  //commented out code at bottom of file may go here??
 
   // handleFormSubmit = event => {
   //   event.preventDefault();
@@ -39,49 +40,64 @@ class Table extends Component {
 
   render() {
     return (
-<div>
+      <div>
         <br />
         <table className="responsive-table">
-        
-        <thead>
-          <tr>
-            <th>Medicine</th>
-            <th>Indication</th>
-            <th>Dosage</th>
-            <th>Frequency</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
 
-  <tbody>
-    <tr>
+          <thead>
+            <tr>
+
+              <th>Medicine</th>
+              <th>Indication</th>
+              <th>Dosage</th>
+              <th>Frequency</th>
+              <th>Notes</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+
               <td>Lotensin</td>
-      <td>blood pressure</td>
-      <td>1</td>
-            <td>twice</td>
-            <td>blue</td>
-    </tr>
-    <tr>
+              <td>blood pressure</td>
+              <td>1</td>
+              <td>twice</td>
+              <td>blue</td>
+
+              <DeleteButton
+              // onClick={() => this.deleteMedicine(medicine._id)} 
+              />
+              {/* <a className="waves-effect waves-red btn-small btn-flat"><i class="material-icons">delete forever</i></a> */}
+              {/* <a href="#" data-activates="mobile-demo" className="right button-collapse"><i class="material-icons">delete forever</i></a> */}
+            </tr>
+            <tr>
               <td>Voltaren</td>
-      <td>inflammation</td>
-      <td>1</td>
-            <td>once</td>
-            <td>this works!</td>
-    </tr>
-    <tr>
+              <td>inflammation</td>
+              <td>1</td>
+              <td>once</td>
+              <td>this works!</td>
+              <DeleteButton
+              // onClick={() => this.deleteMedicine(medicine._id)} 
+              />
+            </tr>
+            <tr>
               <td>Ciprofolxacin</td>
-      <td>antibiotic</td>
-      <td>strep throat</td>
-            <td>three times</td>
-            <td>upsets my stomach</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+              <td>antibiotic</td>
+              <td>strep throat</td>
+              <td>three times</td>
+              <td>upsets my stomach</td>
+              <DeleteButton
+              // onClick={() => this.deleteMedicine(medicine._id)} 
+              />
+            </tr>
+          </tbody>
+        </table>
+      </div>
     )
+  }
 }
-}
-  export default Table;
+export default Table;
 // does the below go here or in profile page component?
   // When the component mounts, load all meds 
   // componentDidMount() {
@@ -109,4 +125,3 @@ class Table extends Component {
   //     .then(res => this.loadMeds())
   //     .catch(err => console.log(err));
   // };
-

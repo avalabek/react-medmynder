@@ -5,8 +5,9 @@ import Input from "../../components/Input";
 import InlineInput from "../../components/InlineInput";
 import Jumbotron from "../../components/Jumbotron";
 import Profile from "../../pages/Profile";
+import API from "../../utils/API"
 
-// import API from "../..utils/API";
+
 class Signup extends React.Component {
   constructor(props) {
     super(props);
@@ -39,22 +40,21 @@ class Signup extends React.Component {
     });
 ;
        
-       alert("Form submitted.")
-  //     API.saveUser({
-  //       firstName: this.state.firstName,
-  //       lastName: this.state.lastName,
-  //       phone: this.state.phone,
-  //       dateOfBirth: this.state.dateOfBirth,
-  //       email: this.state.email,
-  //       password: this.state. password
-  //     })
-  //     //what do we want to do here? prob redirect
-  //     // user to the profile page? how to write
-  //     // res redirect in es6 also need to clear page
-  // here
-  //     .then(res=> this.loadUser())
-  //     .catch(err => console.log(err));
-  //   }
+      alert("Form submitted.")
+      API.saveUser({
+        first: this.state.firstName,
+        last: this.state.lastName,
+        phone: this.state.phone,
+        dob: this.state.dateOfBirth,
+        email: this.state.email,
+        password: this.state. password
+      })
+      //what do we want to do here? prob redirect
+      // user to the profile page? how to write
+      // res redirect in es6 also need to clear page
+      .then(res=> this.loadUser())
+      .catch(err => console.log(err));
+  //   
    };
 
   render() {

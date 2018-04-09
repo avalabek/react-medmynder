@@ -5,6 +5,7 @@ import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import Profile from './pages/Profile';
 import Landing from './pages/Landing';
+import Doctor from './pages/Doctor';
 
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/" component={Landing} />
+          <Route exact path="/doctor" component={Doctor} />
           
       </div>
        </Router>

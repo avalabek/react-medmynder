@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Table.css";
+import DeleteButton from  "../../components/DeleteButton";
 
 //question: this is both in profile page and here, so there is unnecessary duplication
 //does that mean that it should only be in profile page, but how can the child(table)
@@ -45,6 +46,7 @@ class Table extends Component {
         
         <thead>
           <tr>
+            
             <th>Medicine</th>
             <th>Indication</th>
             <th>Dosage</th>
@@ -55,11 +57,16 @@ class Table extends Component {
 
   <tbody>
     <tr>
+              
               <td>Lotensin</td>
       <td>blood pressure</td>
       <td>1</td>
             <td>twice</td>
             <td>blue</td>
+              <a className="waves-effect waves-red btn-flat">✗</a>
+              <DeleteButton />
+              {/* <a className="waves-effect waves-red btn-small btn-flat"><i class="material-icons">delete forever</i></a> */}
+              {/* <a href="#" data-activates="mobile-demo" className="right button-collapse"><i class="material-icons">delete forever</i></a> */}
     </tr>
     <tr>
               <td>Voltaren</td>
@@ -67,6 +74,7 @@ class Table extends Component {
       <td>1</td>
             <td>once</td>
             <td>this works!</td>
+              <a className="waves-effect waves-red btn-flat">✗</a>
     </tr>
     <tr>
               <td>Ciprofolxacin</td>
@@ -74,6 +82,7 @@ class Table extends Component {
       <td>strep throat</td>
             <td>three times</td>
             <td>upsets my stomach</td>
+              <a className="waves-effect waves-red btn-flat">✗</a>
     </tr>
   </tbody>
 </table>

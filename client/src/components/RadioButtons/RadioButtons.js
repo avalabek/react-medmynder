@@ -61,7 +61,7 @@ handleOptionChange (event){
     
       <label>
           <input 
-            class="with-gap" 
+            class="group1" 
             value="3" 
             name="group1" 
             type="radio" 

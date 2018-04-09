@@ -64,9 +64,9 @@ class Signup extends React.Component {
         
         <br /> 
         <div className="row">
-          <div className="col s3" />
+          <div className="col s1" />
 
-          <div className="col s9">
+          <div className="col s11">
                         
             <Input
               value={this.state.firstName}

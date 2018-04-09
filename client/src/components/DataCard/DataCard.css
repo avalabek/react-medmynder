@@ -1,3 +1,9 @@
 .card {
   height:600px;
+ 
 }
+/* #dataCard {
+  width: 560px;
+} */
+
+/* //TODO make the cards responsive at different break points: right now the width stays 600 though the table is responsive */

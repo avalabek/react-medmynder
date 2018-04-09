@@ -52,6 +52,7 @@ class Table extends Component {
             <th>Dosage</th>
             <th>Frequency</th>
             <th>Notes</th>
+              <th>Delete</th>
           </tr>
         </thead>
 

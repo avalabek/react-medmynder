@@ -17,7 +17,7 @@ export const Card = props => (
       
       
       <RadioButtons />
-        <Input label="Notes:make a bigger input" />
+        <Input label="Notes" />
     </div>
     {/* <div className="card-tabs">
       <ul className="tabs tabs-fixed-width">

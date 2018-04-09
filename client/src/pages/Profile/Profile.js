@@ -5,10 +5,10 @@ import React, { Component } from "react";
 // import { Col, Row, Container } from "../../components/Grid";
 // import { List, ListItem } from "../../components/List";
 // import { Input, TextArea, FormBtn } from "../../components/Form";
-import Nav from '../../components/Nav';
-import Jumbotron from '../../components/Jumbotron';
-import Input from '../../components/Input';
-import SubmitButton from '../../components/SubmitButton';
+import Nav from "../../components/Nav";
+import Jumbotron from "../../components/Jumbotron";
+import Input from "../../components/Input";
+import SubmitButton from "../../components/SubmitButton";
 import Col from "../../components/Col";
 import Card from "../../components/Card";
 import Row from "../../components/Row";
@@ -18,7 +18,7 @@ import Table from "../../components/Table";
 import RadioButtons from "../../components/RadioButtons";
 
 class Profile extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       medicine: "",
@@ -26,19 +26,16 @@ class Profile extends Component {
       dosage: "",
       frequency: "",
       notes: ""
-        
     };
   }
   handleInputChange = event => {
-    const {name, value } = event.target;
+    const { name, value } = event.target;
     this.setState({
       [name]: value
     });
   };
-  
-  
 
-  // When the component mounts, load all meds 
+  // When the component mounts, load all meds
   // componentDidMount() {
   //   this.loadMeds();
   // }
@@ -47,12 +44,12 @@ class Profile extends Component {
   // loadMeds = () => {
   //   API.getMeds()
   //     .then(res =>
-  //       this.setState({ 
-  //   medicine: res.data, 
-  //   for: "", 
-  //   dosage: "", 
+  //       this.setState({
+  //   medicine: res.data,
+  //   for: "",
+  //   dosage: "",
   //   frequency: "",
-        // notes: ""
+  // notes: ""
   //  })
   //     )
   //     .catch(err => console.log(err));
@@ -65,14 +62,12 @@ class Profile extends Component {
   //     .catch(err => console.log(err));
   // };
 
-  
-
   // // When the form is submitted, use the API.saveBook method to save the book data
   // // Then reload books from the database
-  
+
   // handleFormSubmit = event => {
   //   event.preventDefault();
-  //   
+  //
   //     API.saveMed({
   //       medicine: this.state.medicine,
   //       for: this.state.for,
@@ -94,32 +89,24 @@ class Profile extends Component {
       frequency: "",
       notes: ""
     });
-    alert("Form submitted.")
+    alert("Form submitted.");
   };
 
   render() {
     return (
-      
       <div>
-       
         <br />
-      <div className="container">
-      
-      <div className="row">
-      {/* <div className="col m12"> */}
-        <Card />
-        {/* <DataCard /> */}
-        <DataCard />
-            
+        <div className="container">
+          <div className="row">
+            {/* <div className="col m12"> */}
+            <Card />
+            <DataCard />
+
             <SubmitButton />
-            
-            
+          </div>
         </div>
-        </div>
-        </div>
-        // </div>
-        
-      
+      </div>
+      // </div>
     );
   }
 }

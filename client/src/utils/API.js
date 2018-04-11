@@ -27,8 +27,10 @@ export default {
   saveUser: function (userData) {
     return axios.post("/api/patient", userData)
       .then(patientInfo => { //patientInfo == dbModel, returned from user creation route
-        console.log(patientInfo);
-        return patientInfo;
+        console.log("patient info", patientInfo.data._id);
+        var ptID = patientInfo.data._id;
+        console.log("ptID", ptID);
+        return ptID;
       });
   },
 

@@ -5,11 +5,12 @@ import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import Profile from './pages/Profile';
 import Landing from './pages/Landing';
+import API from './utils/API.js';
 
 
 class App extends Component {
   state = {
-    patientID: "5ac993c64806ac7c16fc3080"
+    patientID: API.ptID
   }
   render() {
     return (

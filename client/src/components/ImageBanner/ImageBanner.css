@@ -2,8 +2,9 @@
 	height:650px;
 	 background: url("../../images/meds7.jpg");
 	 background-repeat: no-repeat;
-  background-size: 100%;
-  background-color: rgba(255,0,0,10);
+  background-size:75%;
+ background-position: center;
+ 
   padding-top: 100px;
 
      /*opacity: .4; */

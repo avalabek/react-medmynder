@@ -11,7 +11,7 @@ const ImageBanner = ({ children }) => (
 
 	 
 
-	     <div className="container" id="banner2">
+	     <div id="banner2">
 	        <h5 className="logo2">Managing Your Medication has Never Been Easier.
 	        </h5>
       	</div>

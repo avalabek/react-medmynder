@@ -16,15 +16,15 @@ module.exports = {
   // }, //don't need right now, but will keep just in case
    
   create: function (req, res) {
-    console.log(req.body)
+    console.log("req.body", req.body)
     db.Patient 
       .findById(req.params.userId) //grab patient
       .then(patient=> {
-        console.log(patient);
+        console.log("patient", patient);
         db.Medicine 
         .create(req.body) //then create medicine
         .then(medicine => {
-          console.log(medicine);
+          console.log("medicine", medicine);
           patient.medicines.push(medicine); //then push medicine object to medicines array in pt schema
           patient.save(); //then save patient
           res.json(medicine);

@@ -21,13 +21,13 @@ export default {
   // Saves a medicine to the database
   saveMed: function (medData) {
     console.log(medData);
-    return axios.post("/api/medicine/5ac993c64806ac7c16fc3080", medData);
+    return axios.post("/api/medicine/", medData);
   },
   //Saves a user to the database
   saveUser: function (userData) {
     return axios.post("/api/patient", userData)
       .then(patientInfo => { //patientInfo == dbModel, returned from user creation route
-        console.log("patient info", patientInfo.data._id);
+        console.log("patient info", patientInfo);
         var ptID = patientInfo.data._id;
         console.log("ptID", ptID);
         return ptID;

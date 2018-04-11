@@ -26,7 +26,8 @@ class Profile extends Component {
       dosage: "",
       frequency: "",
       instructions: "",
-      notes: ""
+      notes: "",
+      patient: ""
     };
   }
   handleInputChange = event => {

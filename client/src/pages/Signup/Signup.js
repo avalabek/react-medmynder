@@ -16,13 +16,14 @@ class Signup extends React.Component {
       lastName: "",
       phone: "",
       dateOfBirth: "",
+      // add gender
       email: "",
       password: ""
     };
   }
   handleInputChange = event => {
     const { name, value } = event.target;
-    this.setState({
+    this.setState({ //assigning form input to state variables
       [name]: value
     });
   };

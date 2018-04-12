@@ -53,7 +53,9 @@ class Signup extends React.Component {
       //what do we want to do here? prob redirect
       // user to the profile page? how to write
       // res redirect in es6 also need to clear page
-      .then(res=> this.loadUser())
+      .then(patientID=> {
+        console.log("this is the patient ID:", patientID)
+        this.props.setUser(patientID)})
       .catch(err => console.log(err));
   //   
    };

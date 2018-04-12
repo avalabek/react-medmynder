@@ -19,6 +19,7 @@ import API from "../../utils/API";
 
 class Profile extends Component {
   constructor(props) {
+    console.log("props", props)
     super(props);
     this.state = {
       medicine: "",
@@ -26,8 +27,7 @@ class Profile extends Component {
       dosage: "",
       frequency: "",
       instructions: "",
-      notes: "",
-      patient: ""
+      notes: ""
     };
   }
   handleInputChange = event => {
@@ -41,6 +41,7 @@ class Profile extends Component {
     event.preventDefault();
     alert("Form submitted.");
     console.log("handleFormSubmit function called");
+    console.log("patient id", this.props.patientID);
     API.saveMed({
       medicine: this.state.medicine,
       indication: this.state.indication,

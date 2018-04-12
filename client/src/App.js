@@ -17,7 +17,7 @@ class App extends Component {
     this.setState({
       patientID: id
     });
-    console.log("patientID passed in from Signup", this.state.patientID);
+    console.log("patientID passed in from Signup", this.state.patientID); //Signup component is sending userID here, but it is not being sent to the Profile component as a prop
   }
 
   render() {
@@ -25,8 +25,9 @@ class App extends Component {
       <Router>
       <div className="App">
         <Nav />
-          
-          <Route exact path="/signup" render={(props) => <Signup {...props} setUser={this.setUser}/>} /> 
+           
+          <Route exact path="/signup" render={(props) => <Signup {...props} setUser={this.setUser}/>} />  
+          {/* sending this patientID prop to the profile component is not working */}
           <Route exact path="/profile" render={(props) => <Profile {...props} patientID = {this.state.patientID}/>} />
           <Route exact path="/" component={Landing} />
       </div>

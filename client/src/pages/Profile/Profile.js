@@ -19,7 +19,7 @@ import API from "../../utils/API";
 
 class Profile extends Component {
   constructor(props) {
-    console.log("props", props)
+    console.log("props", props) //is undefined
     super(props);
     this.state = {
       medicine: "",
@@ -41,7 +41,7 @@ class Profile extends Component {
     event.preventDefault();
     alert("Form submitted.");
     console.log("handleFormSubmit function called");
-    console.log("patient id", this.props.patientID);
+    console.log("patient id", this.props.patientID); //isn't being passed from App.js
     API.saveMed({
       medicine: this.state.medicine,
       indication: this.state.indication,

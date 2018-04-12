@@ -4,9 +4,9 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 
-const cookieSession = require('cookie-session');
-const passport = require('passport');
-const passportSetup = require('./config/passport-setup');
+// const cookieSession = require('cookie-session');
+// const passport = require('passport');
+// const passportSetup = require('./config/passport-setup');
 
 const PORT = process.env.PORT || 3001;
 
@@ -17,11 +17,11 @@ app.use(bodyParser.json());
 app.use(express.static("client/build"));
 
 
-// routes for authentication
-app.use('/auth', authRoutes);
+// // routes for authentication
+// app.use('/auth', authRoutes);
 
-// routes for profile
-app.use('/profile', profileRoutes);
+// // routes for profile
+// app.use('/profile', profileRoutes);
 
 // routes for everything else
 app.use(routes);

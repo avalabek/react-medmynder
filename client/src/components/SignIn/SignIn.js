@@ -7,7 +7,7 @@ import "./SignIn.css";
 
 
 
-class SignIn extends React.Component {
+class SignIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -50,7 +50,10 @@ class SignIn extends React.Component {
 
       <div className="col s3" />
       <div className="col s6" >
-      <img src={"../images/loginicon.png"} />
+      <img 
+        src={"../images/loginicon.png"} 
+        alt="Medication"
+        />
 
       <h5 className="header-center"> Log In </h5>
 

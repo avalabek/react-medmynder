@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Table.css";
 import DeleteButton from "../../components/DeleteButton";
+import TableData from "../../components/TableData";
 
 //question: this is both in profile page and here, so there is unnecessary duplication
 //does that mean that it should only be in profile page, but how can the child(table)
@@ -39,14 +40,11 @@ class Table extends Component {
   // };
 
   render() {
-    return (
-      <div>
+    return <div>
         <br />
         <table className="responsive-table">
-
           <thead>
             <tr>
-
               <th>Medicine</th>
               <th>Indication</th>
               <th>Dosage</th>
@@ -58,43 +56,43 @@ class Table extends Component {
 
           <tbody>
             <tr>
-
               <td>Lotensin</td>
               <td>blood pressure</td>
               <td>1</td>
               <td>twice</td>
               <td>blue</td>
+              <DeleteButton />
 
-              <DeleteButton
-              // onClick={() => this.deleteMedicine(medicine._id)} 
-              />
-              {/* <a className="waves-effect waves-red btn-small btn-flat"><i class="material-icons">delete forever</i></a> */}
-              {/* <a href="#" data-activates="mobile-demo" className="right button-collapse"><i class="material-icons">delete forever</i></a> */}
             </tr>
-            <tr>
-              <td>Voltaren</td>
-              <td>inflammation</td>
-              <td>1</td>
-              <td>once</td>
-              <td>this works!</td>
-              <DeleteButton
-              // onClick={() => this.deleteMedicine(medicine._id)} 
+            </tbody>
+            {/* <tr>
+              <TableData> {this.props.indication} </TableData>
+              
+            </tr> */}
+          
+            {/* <tr>
+              <TableData 
+                value={this.props.medicines} 
+                onChange={this.props.handleInputChange} 
               />
-            </tr>
+            </tr> */}
+            {/* <DeleteButton
+              // onClick={() => this.deleteMedicine(medicine._id)} 
+              /> */}
+<tbody>
             <tr>
               <td>Ciprofolxacin</td>
               <td>antibiotic</td>
               <td>strep throat</td>
               <td>three times</td>
               <td>upsets my stomach</td>
-              <DeleteButton
+              {/* <DeleteButton
               // onClick={() => this.deleteMedicine(medicine._id)} 
-              />
+              /> */}
             </tr>
           </tbody>
         </table>
-      </div>
-    )
+      </div>;
   }
 }
 export default Table;

@@ -9,9 +9,11 @@ import API from './utils/API.js';
 
 
 class App extends Component {
-  state = {
-    patientID: ""
+  constructor(props){
+    super(props)
+    this.state = {patientID: ""}
   }
+
 
   setUser = id => {
     this.setState({
@@ -24,11 +26,10 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-        <Nav />
-           
-          <Route exact path="/signup" render={(props) => <Signup {...props} setUser={this.setUser}/>} />  
+        <Nav /> 
+          <Route exact path="/signup" render={(props) => <Signup {...this.props} setUser={this.setUser}/>} />  
           {/* sending this patientID prop to the profile component is not working */}
-          <Route exact path="/profile" render={(props) => <Profile {...props} patientID = {this.state.patientID}/>} />
+          <Route exact path="/profile" render={(props) => <Profile {...this.props} patientID={this.state.patientID}/>} />
           <Route exact path="/" component={Landing} />
       </div>
        </Router>

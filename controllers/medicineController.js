@@ -18,9 +18,9 @@ module.exports = {
   create: function (req, res) {
     console.log("req.body", req.body)
     db.Patient 
-      .findById(req.params.userId) //grab patient
+      .findById(req.body.patient) //grab patient
       .then(patient=> {
-        console.log("patient", patient);
+        console.log("patient found in medicineController create", patient);
         db.Medicine 
         .create(req.body) //then create medicine
         .then(medicine => {

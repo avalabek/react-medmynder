@@ -3,7 +3,8 @@ import axios from "axios";
 export default {
   //we need this to load users data can connect to meds?
   getUser: function (id) {
-    return axios.get("/api/patient" + id);
+    console.log("axios getUser hit, id that is passed in is:", id);
+    return axios.get("/api/patient/" + id);
   },
   // Gets all meds but we need this to get all meds
   // for a specific user?
@@ -20,7 +21,7 @@ export default {
   },
   // Saves a medicine to the database
   saveMed: function (medData) {
-    console.log(medData);
+    console.log("medData passed into saveMed", medData);
     return axios.post("/api/medicine/", medData);
   },
   //Saves a user to the database

@@ -19,9 +19,10 @@ import API from "../../utils/API";
 
 class Profile extends Component {
   constructor(props) {
-    console.log("props", props) //is undefined
     super(props);
+    console.log("props", props) //is empty string
     this.state = {
+      medicines: [],
       medicine: "",
       indication: "",
       dosage: "",
@@ -29,7 +30,21 @@ class Profile extends Component {
       instructions: "",
       notes: ""
     };
+    
   }
+
+  componentDidMount() {
+    this.loadUserMeds();
+  }
+
+  loadUserMeds = () => {
+    API.getUser(this.props.patientID)
+      .then(res =>
+        this.setState({ medicines: res.data.medicines, medicine: "", indication: "", dosage: "", frequency: "", instructions: "", notes: "" })
+      )
+      .catch(err => console.log(err));
+  };
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -51,16 +66,12 @@ class Profile extends Component {
       notes: this.state.notes,
       patient: this.props.patientID
     })
-      .then(res => this.loadMeds())
+      .then(res => { 
+        console.log("Profile savemed then", res);
+        this.loadUserMeds();
+    })
       .catch(err => console.log(err));
-    this.setState({
-      medicine: "",
-      indication: "",
-      dosage: "",
-      frequency: "",
-      instructions: "",
-      notes: ""
-    });
+    
   };
 
   render() {
@@ -77,7 +88,7 @@ class Profile extends Component {
             <SubmitButton
               onClick={this.handleFormSubmit}
             />
-            {/* <DataCard /> */}
+            
             <DataCard />
           </div>
         </div>

@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import "./Nav.css";
 
 const Nav = () => (
   <div className="navbar-fixed header">
     <nav>
       <div className="nav-wrapper header">
-         <a href="/" className="brand-logo center" />
+         <Link to="/" className="brand-logo center" />
         Med<strong>MY</strong>nder<a>
           {" "}
           <i className="fas fa-pills app-logo" />
@@ -13,15 +14,18 @@ const Nav = () => (
         <ul className="right hide-on-med-and-down">
           <li />
           <li>
-            <a href="/profile">Putting you back in control of your own health.</a>
+            <Link to="/profile">ENTER MEDS</Link>
+          </li>
+          <li>
+            <Link to="/profile">Putting you back in control of your own health.</Link>
           </li>
         
           <li>
-            <a href="/">Login</a>
+            <Link to="/">Login</Link>
           </li>
           
           <li>
-            <a href="/signup">REGISTER</a>
+            <Link to="/signup">REGISTER</Link>
           </li>
          
         </ul>

@@ -1,12 +1,15 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import "./Nav.css";
 
 const Nav = () => (
   <div className="navbar-fixed header">
     <nav>
       <div className="nav-wrapper header">
-         <Link to="/" className="brand-logo center" />
+        <a href="/" data-target="mobile-demo" className="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <Link to="/" className="brand-logo center" />
         Med<strong>MY</strong>nder<a>
           {" "}
           <i className="fas fa-pills app-logo" />
@@ -17,17 +20,18 @@ const Nav = () => (
             <Link to="/profile">ENTER MEDS</Link>
           </li>
           <li>
-            <Link to="/profile">Putting you back in control of your own health.</Link>
+            <Link to="/profile">
+              Putting you back in control of your own health.
+            </Link>
           </li>
-        
+
           <li>
             <Link to="/">Login</Link>
           </li>
-          
+
           <li>
             <Link to="/signup">REGISTER</Link>
           </li>
-         
         </ul>
       </div>
     </nav>

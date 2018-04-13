@@ -62,8 +62,7 @@ class Profile extends Component {
   //     .catch(err => console.log(err));
   // };
 
-  // // When the form is submitted, use the API.saveBook method to save the book data
-  // // Then reload books from the database
+
 
   // handleFormSubmit = event => {
   //   event.preventDefault();

@@ -39,9 +39,10 @@ class Profile extends Component {
 
   loadUserMeds = () => {
     API.getUser(this.props.patientID)
-      .then(res =>
+      .then(res => {
+        console.log("res.data.medicines", res.data.medicines)
         this.setState({ medicines: res.data.medicines, medicine: "", indication: "", dosage: "", frequency: "", instructions: "", notes: "" })
-      )
+      })
       .catch(err => console.log(err));
   };
 
@@ -67,7 +68,7 @@ class Profile extends Component {
       patient: this.props.patientID
     })
       .then(res => { 
-        console.log("Profile savemed then", res);
+        console.log("handleFormsubmit->API.saveMed->then", res);
         this.loadUserMeds();
     })
       .catch(err => console.log(err));

@@ -7,11 +7,10 @@ const medicineSchema = new Schema({
         required: true
     },
     indication: {
-        type: String,
-        required: true
+        type: String
     },
     dosage: {
-        type: Number,
+        type: String,
     },
     frequency: {
         type: Number,

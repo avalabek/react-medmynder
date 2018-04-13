@@ -92,9 +92,10 @@ class Profile extends Component {
 
             <DataCard />
             </div>
-          <div className="col l12">
+          <div className="container">
+          {/* <div className="col m6"> */}
             <SubmitButton onClick={this.handleFormSubmit} />
-          
+            <br /> <br /> <br /> 
         </div>
       </div>
       </div>

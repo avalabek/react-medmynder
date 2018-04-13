@@ -2,9 +2,9 @@ import React from "react";
 import "./Signup.css";
 import SubmitButton from "../../components/SubmitButton";
 import Input from "../../components/Input";
-import InlineInput from "../../components/InlineInput";
-import Jumbotron from "../../components/Jumbotron";
-import Profile from "../../pages/Profile";
+// import InlineInput from "../../components/InlineInput";
+// import Jumbotron from "../../components/Jumbotron";
+// import Profile from "../../pages/Profile";
 import API from "../../utils/API"
 
 
@@ -16,13 +16,14 @@ class Signup extends React.Component {
       lastName: "",
       phone: "",
       dateOfBirth: "",
+      gender:"",
       email: "",
       password: ""
     };
   }
   handleInputChange = event => {
     const { name, value } = event.target;
-    this.setState({
+    this.setState({ //assigning form input to state variables
       [name]: value
     });
   };
@@ -35,6 +36,7 @@ class Signup extends React.Component {
       lastName: "",
       phone: "",
       dateOfBirth: "",
+      gender:"",
       email: "",
       password: ""
     });
@@ -46,13 +48,16 @@ class Signup extends React.Component {
         last: this.state.lastName,
         phone: this.state.phone,
         dob: this.state.dateOfBirth,
+        gender: this.state.gender,
         email: this.state.email,
-        password: this.state. password
+        password: this.state.password
       })
       //what do we want to do here? prob redirect
       // user to the profile page? how to write
       // res redirect in es6 also need to clear page
-      .then(res=> this.loadUser())
+      .then(patientID=> {
+        console.log("this is the patient ID:", patientID)
+        this.props.setUser(patientID)})
       .catch(err => console.log(err));
   //   
    };
@@ -93,6 +98,12 @@ class Signup extends React.Component {
               name="dateOfBirth"
               label="Date of birth"
             />
+            <Input 
+              value={this.state.gender}
+              onChange={this.handleInputChange}
+              name="gender"
+              label="Gender"
+            />  
             <Input
               value={this.state.email}
               onChange={this.handleInputChange}

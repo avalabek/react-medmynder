@@ -3,7 +3,7 @@ const medicineController = require("../../controllers/medicineController");
 
 
 // Matches with "/api/medicine/
-router.route("/:userId")
+router.route("/")
   .post(medicineController.create); //when a patientID is passed in the route, we create the medicine
 
 router.route("/:id")

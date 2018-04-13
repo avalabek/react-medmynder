@@ -3,20 +3,25 @@ const db = require("../models");
 module.exports = {
     findAll: function (req, res) {
         db.Patient
-            .find(req.query)
+            .find(req.query)    
             .sort({ date: -1 })
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     findById: function (req, res) {
+        console.log("patient findByID route hit")
+        console.log("req.params.id", req.params.id)
         db.Patient
             .findById(req.params.id)
             .populate("medicines")
-            .then(dbModel => res.json(dbModel))
+            .then(dbModel => {
+                console.log(dbModel)
+                res.json(dbModel)
+            })
             .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
-        console.log(req.body)
+        console.log("patient controller req.body", req.body)
         db.Patient
             .create(req.body)
             .then(dbModel => res.json(dbModel))

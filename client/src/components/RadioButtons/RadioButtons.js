@@ -1,14 +1,10 @@
 import React, { Component } from "react";
 
-
-
-
 export default class RadioButtons extends Component {
   constructor(props) {
     super(props);
     this.state = {
       selectedOption: ""
-      
     };
     this.handleOptionChange= this.handleOptionChange.bind(this)
   }
@@ -21,12 +17,11 @@ export default class RadioButtons extends Component {
   //   });
   // };
 handleOptionChange (event){
-
-  console.log(event); 
+  console.log(event.target.value); 
   this.setState({
     selectedOption: event.target.value
-  
   });
+  this.props.onChange(event);
 }
 
   render() {
@@ -37,7 +32,7 @@ handleOptionChange (event){
       <span>
       <label>
         <input 
-          name="group1" 
+          name="frequency" 
           value="1" 
           type="radio" 
           checked={this.state.selectedOption==='1'}
@@ -49,7 +44,7 @@ handleOptionChange (event){
     
       <label>
           <input 
-            name="group1" 
+            name="frequency" 
             value="2" 
             type="radio" 
             checked={this.state.selectedOption==='2'}
@@ -63,7 +58,7 @@ handleOptionChange (event){
           <input 
             className="group1" 
             value="3" 
-            name="group1" 
+            name="frequency" 
             type="radio" 
             checked={this.state.selectedOption==='3'}
             onChange={this.handleOptionChange} 

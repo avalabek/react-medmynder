@@ -1,19 +1,18 @@
-import React, { Component } from 'react';
-import './Landing.css';
+import React from "react";
+import ImageBanner from "../../components/ImageBanner";
+import SignIn from "../../components/SignIn";
 
 
 
-class Landing extends Component {
-  render() {
-    return (
-      
-        <div>
-        <br /><br /><br /><br />
-         <h1>Welcome.</h1>
-        
-        </div>
-      
-    );
-  }
-}
+const Landing = () => (
+  <div>
+  	<ImageBanner />
+  	<SignIn />
+
+
+
+ 
+  </div>
+);
+
 export default Landing;

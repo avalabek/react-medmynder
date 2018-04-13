@@ -16,7 +16,7 @@ class Signup extends React.Component {
       lastName: "",
       phone: "",
       dateOfBirth: "",
-      // add gender
+      gender:"",
       email: "",
       password: ""
     };
@@ -36,6 +36,7 @@ class Signup extends React.Component {
       lastName: "",
       phone: "",
       dateOfBirth: "",
+      gender:"",
       email: "",
       password: ""
     });
@@ -47,6 +48,7 @@ class Signup extends React.Component {
         last: this.state.lastName,
         phone: this.state.phone,
         dob: this.state.dateOfBirth,
+        gender: this.state.gender,
         email: this.state.email,
         password: this.state.password
       })
@@ -96,6 +98,12 @@ class Signup extends React.Component {
               name="dateOfBirth"
               label="Date of birth"
             />
+            <Input 
+              value={this.state.gender}
+              onChange={this.handleInputChange}
+              name="gender"
+              label="Gender"
+            />  
             <Input
               value={this.state.email}
               onChange={this.handleInputChange}

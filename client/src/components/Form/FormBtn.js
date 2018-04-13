@@ -1,6 +1,9 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 export const FormBtn = props => (
+  <div>
+<Link to="/signup">
   <button 
   {...props} 
   className="waves-effect waves-light btn"
@@ -10,4 +13,7 @@ export const FormBtn = props => (
   message="message" >
     {props.children}
   </button>
+  </Link>
+  </div>
 );
+

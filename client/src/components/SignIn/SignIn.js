@@ -7,7 +7,7 @@ import "./SignIn.css";
 
 
 
-class SignIn extends React.Component {
+class SignIn extends Component {
   constructor(props) {
     super(props);
     this.state = {

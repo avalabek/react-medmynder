@@ -5,7 +5,7 @@ import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import Profile from './pages/Profile';
 import Landing from './pages/Landing';
-import API from './utils/API.js';
+// import API from './utils/API.js';
 
 
 class App extends Component {

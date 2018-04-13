@@ -12,7 +12,7 @@ import API from "../../utils/API";
 class Profile extends Component {
   constructor(props) {
     super(props);
-    console.log("props", props) //is empty string
+    console.log("props", props); //is empty string
     this.state = {
       medicines: [],
       medicine: "",
@@ -22,7 +22,6 @@ class Profile extends Component {
       instructions: "",
       notes: ""
     };
-    
   }
 
   componentDidMount() {
@@ -32,16 +31,16 @@ class Profile extends Component {
   loadUserMeds = () => {
     API.getUser(this.props.patientID)
       .then(res => {
-        console.log("res.data.medicines", res.data.medicines)
-        this.setState({ 
-          medicines: res.data.medicines, 
-          medicine: "", 
-          indication: "", 
-          dosage: "", 
-          frequency: "", 
-          instructions: "", 
-          notes: "" 
-        })
+        console.log("res.data.medicines", res.data.medicines);
+        this.setState({
+          medicines: res.data.medicines,
+          medicine: "",
+          indication: "",
+          dosage: "",
+          frequency: "",
+          instructions: "",
+          notes: ""
+        });
       })
       .catch(err => console.log(err));
   };
@@ -67,14 +66,18 @@ class Profile extends Component {
       notes: this.state.notes,
       patient: this.props.patientID
     })
-      .then(res => { 
+      .then(res => {
         console.log("handleFormsubmit->API.saveMed->then", res);
-         this.loadUserMeds();
+        this.loadUserMeds();
         // this.getMed({patient: this.props.patientID});
-        
-    })
+      })
       .catch(err => console.log(err));
-    
+  };
+
+  deleteMed = id => {
+    API.deleteMed(id)
+    .then(res => this.loadUserMeds())
+    .catch(err => console.log(err))
   };
 
   render() {
@@ -84,14 +87,9 @@ class Profile extends Component {
         <div className="container">
           <div className="row">
             {/* <div className="col m12"> */}
-            <Card 
-            handleInputChange = {this.handleInputChange} {...this.state}>
-              
-            </Card>
-            <SubmitButton
-              onClick={this.handleFormSubmit}
-            />
-            
+            <Card handleInputChange={this.handleInputChange} {...this.state} />
+            <SubmitButton onClick={this.handleFormSubmit} />
+
             <DataCard />
           </div>
         </div>

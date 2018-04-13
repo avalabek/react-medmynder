@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Table.css";
 import DeleteButton from "../../components/DeleteButton";
+import TableData from "../../components/TableData";
 
 //question: this is both in profile page and here, so there is unnecessary duplication
 //does that mean that it should only be in profile page, but how can the child(table)
@@ -72,11 +73,11 @@ class Table extends Component {
               {/* <a href="#" data-activates="mobile-demo" className="right button-collapse"><i class="material-icons">delete forever</i></a> */}
             </tr>
             <tr>
-              <td>Voltaren</td>
-              <td>inflammation</td>
-              <td>1</td>
-              <td>once</td>
-              <td>this works!</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
               <DeleteButton
               // onClick={() => this.deleteMedicine(medicine._id)} 
               />

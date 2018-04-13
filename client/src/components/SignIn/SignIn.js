@@ -50,7 +50,10 @@ class SignIn extends Component {
 
       <div className="col s3" />
       <div className="col s6" >
-      <img src={"../images/loginicon.png"} />
+      <img 
+        src={"../images/loginicon.png"} 
+        alt="Medication"
+        />
 
       <h5 className="header-center"> Log In </h5>
 

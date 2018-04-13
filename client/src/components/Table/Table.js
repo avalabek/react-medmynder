@@ -61,27 +61,25 @@ class Table extends Component {
               <td>1</td>
               <td>twice</td>
               <td>blue</td>
+              <DeleteButton />
 
-              {/* <DeleteButton
-              // onClick={() => this.deleteMedicine(medicine._id)} 
-              /> */}
-              {/* <a className="waves-effect waves-red btn-small btn-flat"><i class="material-icons">delete forever</i></a> */}
-              {/* <a href="#" data-activates="mobile-demo" className="right button-collapse"><i class="material-icons">delete forever</i></a> */}
             </tr>
-            <tr>
+            </tbody>
+            {/* <tr>
               <TableData> {this.props.indication} </TableData>
               
-            </tr>
-            <tr>
+            </tr> */}
+          
+            {/* <tr>
               <TableData 
                 value={this.props.medicines} 
                 onChange={this.props.handleInputChange} 
               />
-            </tr>
+            </tr> */}
             {/* <DeleteButton
               // onClick={() => this.deleteMedicine(medicine._id)} 
               /> */}
-
+<tbody>
             <tr>
               <td>Ciprofolxacin</td>
               <td>antibiotic</td>

@@ -6,7 +6,7 @@ import Card from "../../components/Card";
 // import Row from "../../components/Row";
 import "./Profile.css";
 import DataCard from "../../components/DataCard";
-
+import EditButton from "../../components/EditButton";
 import API from "../../utils/API";
 
 class Profile extends Component {
@@ -79,7 +79,7 @@ class Profile extends Component {
     .then(res => this.loadUserMeds())
     .catch(err => console.log(err))
   };
-
+// () => this.deleteMedicine(medicine._id)
   render() {
     return (
       <div>
@@ -91,6 +91,7 @@ class Profile extends Component {
             <SubmitButton onClick={this.handleFormSubmit} />
 
             <DataCard />
+            <EditButton />
           </div>
         </div>
       </div>

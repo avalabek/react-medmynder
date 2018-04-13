@@ -5,7 +5,8 @@ import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import Profile from './pages/Profile';
 import Landing from './pages/Landing';
-import API from './utils/API.js';
+import Edit from './pages/Edit';
+// import API from './utils/API.js';
 
 
 class App extends Component {
@@ -31,6 +32,7 @@ class App extends Component {
           {/* sending this patientID prop to the profile component is not working */}
           <Route exact path="/profile" render={(props) => <Profile {...this.props} patientID={this.state.patientID}/>} />
           <Route exact path="/" component={Landing} />
+          <Route exact path="/edit" component={Edit} />
       </div>
        </Router>
     );

@@ -2,9 +2,9 @@ import React from "react";
 import "./Signup.css";
 import SubmitButton from "../../components/SubmitButton";
 import Input from "../../components/Input";
-import InlineInput from "../../components/InlineInput";
-import Jumbotron from "../../components/Jumbotron";
-import Profile from "../../pages/Profile";
+// import InlineInput from "../../components/InlineInput";
+// import Jumbotron from "../../components/Jumbotron";
+// import Profile from "../../pages/Profile";
 import API from "../../utils/API"
 
 
@@ -48,7 +48,7 @@ class Signup extends React.Component {
         phone: this.state.phone,
         dob: this.state.dateOfBirth,
         email: this.state.email,
-        password: this.state. password
+        password: this.state.password
       })
       //what do we want to do here? prob redirect
       // user to the profile page? how to write

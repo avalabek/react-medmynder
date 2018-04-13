@@ -4,17 +4,17 @@ import React, { Component } from "react";
 // import { Col, Row, Container } from "../../components/Grid";
 // import { List, ListItem } from "../../components/List";
 // import { Input, TextArea, FormBtn } from "../../components/Form";
-import Nav from '../../components/Nav';
-import Jumbotron from '../../components/Jumbotron';
-import Input from '../../components/Input';
+// import Nav from '../../components/Nav';
+// import Jumbotron from '../../components/Jumbotron';
+// import Input from '../../components/Input';
 import SubmitButton from '../../components/SubmitButton';
-import Col from "../../components/Col";
+// import Col from "../../components/Col";
 import Card from "../../components/Card";
-import Row from "../../components/Row";
+// import Row from "../../components/Row";
 import "./Profile.css";
 import DataCard from "../../components/DataCard";
-import Table from "../../components/Table";
-import RadioButtons from "../../components/RadioButtons";
+// import Table from "../../components/Table";
+// import RadioButtons from "../../components/RadioButtons";
 import API from "../../utils/API";
 
 class Profile extends Component {

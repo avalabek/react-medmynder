@@ -86,16 +86,18 @@ class Profile extends Component {
         <br />
         <div className="container">
           <div className="row">
-            {/* <div className="col m12"> */}
+            
             <Card handleInputChange={this.handleInputChange} {...this.state} />
-            <SubmitButton onClick={this.handleFormSubmit} />
+            
 
             <DataCard />
-            <EditButton />
-          </div>
+            </div>
+          <div className="col l12">
+            <SubmitButton onClick={this.handleFormSubmit} />
+          
         </div>
       </div>
-      // </div>
+      </div>
     );
   }
 }

@@ -14,9 +14,6 @@ const Nav = () => (
         <ul className="right hide-on-med-and-down">
           <li />
           <li>
-            <Link to="/profile">ENTER MEDS</Link>
-          </li>
-          <li>
             <Link to="/profile">Putting you back in control of your own health.</Link>
           </li>
         

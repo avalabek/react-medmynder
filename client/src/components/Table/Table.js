@@ -43,6 +43,15 @@ import API from "../../utils/API";
    };
 
   render() {
+    // if (this.meds.frequency == 1) {
+    //   var freq = "Once A Day"
+    // }
+    // else if (this.meds.frequency == 2) {
+    //   var freq = "Twice A Day"
+    // }
+    // else if {this.meds.frequency == 3} {
+    //   var freq = "Three Times A Day"
+    // }
     return (
       
       <div className="col m6 s6">

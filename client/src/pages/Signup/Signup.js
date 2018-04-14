@@ -57,6 +57,7 @@ class Signup extends React.Component {
       // res redirect in es6 also need to clear page
       .then(patientID=> {
         console.log("this is the patient ID:", patientID)
+        console.log("first name?", this.props.firstName)
         this.props.setUser(patientID)})
       .catch(err => console.log(err));
   //   

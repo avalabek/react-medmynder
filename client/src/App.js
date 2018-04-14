@@ -21,6 +21,7 @@ class App extends Component {
       patientID: id
     });
     console.log("patientID passed in from Signup", this.state.patientID); //Signup component is sending userID here, but it is not being sent to the Profile component as a prop
+    
   }
 
   render() {

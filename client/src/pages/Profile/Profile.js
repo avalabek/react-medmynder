@@ -90,7 +90,7 @@ class Profile extends Component {
             <Card handleInputChange={this.handleInputChange} {...this.state} />
             
 
-            <DataCard />
+            <DataCard medicines={this.state.medicines}/>
             </div>
           <div className="container">
           {/* <div className="col m6"> */}

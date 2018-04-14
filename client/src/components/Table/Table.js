@@ -8,6 +8,14 @@ import TableData from "../../components/TableData";
 // access the state from the user inputs.
 
 class Table extends Component {
+  constructor(props) {
+    super(props);
+    console.log("props", props); //is empty string
+    this.state = {
+      medicines: this.props.medicines,
+
+    };
+  }
   // constructor(props) {
   //   super(props);
   //   this.state = {
@@ -56,7 +64,7 @@ class Table extends Component {
 
           <tbody>
             <tr>
-              <td>Lotensin</td>
+              <td medicines={this.state.medicines}>{this.state.medicines}</td>
               <td>blood pressure</td>
               <td>1</td>
               <td>twice</td>
@@ -70,12 +78,15 @@ class Table extends Component {
               
             </tr> */}
           
-            {/* <tr>
+            <tr>
               <TableData 
-                value={this.props.medicines} 
+                medicines={this.props.medicines}
+                value={this.props.dosage} 
                 onChange={this.props.handleInputChange} 
+               
               />
-            </tr> */}
+            </tr>
+          
             {/* <DeleteButton
               // onClick={() => this.deleteMedicine(medicine._id)} 
               /> */}

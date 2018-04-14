@@ -10,6 +10,7 @@ import DeleteButton from "../../components/DeleteButton";
     console.log("props", props); //is empty string
     this.state = {
       medicines: this.props.medicines,
+     
       
     };
 
@@ -18,17 +19,12 @@ import DeleteButton from "../../components/DeleteButton";
 
 render() {
   return (
-    <div className= "col m6">
-      <div className="card" id="dataCard">
-        <div className= "card-content">
+
 
 
      <Table /> 
 
-        </div>
-      </div>
-    </div>
-
+      
 
 
         );

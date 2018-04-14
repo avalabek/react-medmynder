@@ -47,7 +47,7 @@ deleteMed = id => {
 
           <thead>
             <tr>
-
+             
               <th>Medicine</th>
               <th>Indication</th>
               <th>Dosage</th>

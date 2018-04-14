@@ -22,6 +22,8 @@ export default class Card extends Component {
 
   render() {
     return (
+  <div>
+    <h3>Welcome, {this.props.userName} </h3>
     <div className="col m6">
       <div className="card">
         <div className="card-content">
@@ -71,6 +73,7 @@ export default class Card extends Component {
           <div id="test5">Test 2</div>
           <div id="test6">Test 3</div>
         </div> */}
+      </div>
       </div>
       </div>
     );

@@ -15,6 +15,7 @@ class Profile extends Component {
     super(props);
     console.log("props", props); //is empty string
     this.state = {
+      userName:"",
       medicines: [],
       medicine: "",
       indication: "",
@@ -36,6 +37,7 @@ class Profile extends Component {
       .then(res => {
         console.log("res.data.medicines", res.data.medicines);
         this.setState({
+          userName:res.data.first + " " + res.data.last,
           medicines: res.data.medicines,
           medicine: "",
           indication: "",
@@ -92,7 +94,7 @@ class Profile extends Component {
         <div className="container">
           <div className="row">
             
-            <Card handleInputChange={this.handleInputChange} {...this.state} radio={this.radioButtons} />
+            <Card handleInputChange={this.handleInputChange} {...this.state} radio={this.radioButtons}  first={this.state.userName} />
             
 
             <DataCard medicines={this.state.medicines} loadUserMeds={this.loadUserMeds} />

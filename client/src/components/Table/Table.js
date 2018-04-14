@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Table.css";
 import DeleteButton from "../../components/DeleteButton";
 import TableData from "../../components/TableData";
-
+import API from "../../utils/API";
 //question: this is both in profile page and here, so there is unnecessary duplication
 //does that mean that it should only be in profile page, but how can the child(table)
 // access the state from the user inputs.
@@ -16,7 +16,12 @@ import TableData from "../../components/TableData";
 
     };
   }
-
+   deleteMed = id => {
+     alert("delete button hit");
+     API.deleteMed(id)
+       .then(res => this.loadUserMeds())
+       .catch(err => console.log(err))
+   };
 
   render() {
     return (
@@ -24,7 +29,7 @@ import TableData from "../../components/TableData";
       <div className="col m6 s6">
    <div className="card"> 
    <div className="card-content">  
-            <br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br />
       <table className="responsive-table centered">      
           <thead>
             <tr>
@@ -48,7 +53,7 @@ import TableData from "../../components/TableData";
                         <td>{meds.dosage}</td>
                         <td>{meds.frequency}</td>
                         <td>{meds.notes}</td>
-                        <DeleteButton /> 
+                      <DeleteButton onClick={() => this.deleteMed(meds._id)} /> 
                       </strong>
                  
                 

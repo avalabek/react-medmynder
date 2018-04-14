@@ -74,12 +74,8 @@ class Profile extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteMed = id => {
-    API.deleteMed(id)
-    .then(res => this.loadUserMeds())
-    .catch(err => console.log(err))
-  };
-// () => this.deleteMedicine(medicine._id)
+  
+// 
   render() {
     return (
       <div>

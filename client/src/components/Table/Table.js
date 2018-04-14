@@ -16,10 +16,29 @@ import API from "../../utils/API";
 
     };
   }
+  //  loadUserMeds = () => {
+  //    API.getUser(this.props.patientID)
+  //      .then(res => {
+  //        console.log("res.data.medicines", res.data.medicines);
+  //        this.setState({
+  //          medicines: res.data.medicines,
+  //          medicine: "",
+  //          indication: "",
+  //          dosage: "",
+  //          frequency: "",
+  //          instructions: "",
+  //          notes: ""
+  //        });
+  //      })
+  //      .catch(err => console.log(err));
+  //  };
+
+   
    deleteMed = id => {
      alert("delete button hit");
      API.deleteMed(id)
-       .then(res => this.loadUserMeds())
+       .then(res => this.props.loadUserMeds())
+      // .then(window.location.reload())
        .catch(err => console.log(err))
    };
 

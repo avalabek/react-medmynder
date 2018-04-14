@@ -22,6 +22,8 @@ class Profile extends Component {
       instructions: "",
       notes: ""
     };
+    this.radioButtons=React.createRef();
+
   }
 
   componentDidMount() {
@@ -68,6 +70,7 @@ class Profile extends Component {
     })
       .then(res => {
         console.log("handleFormsubmit->API.saveMed->then", res);
+        this.radioButtons.current.resetOptions();
         this.loadUserMeds();
         // this.getMed({patient: this.props.patientID});
       })
@@ -83,10 +86,10 @@ class Profile extends Component {
         <div className="container">
           <div className="row">
             
-            <Card handleInputChange={this.handleInputChange} {...this.state} />
+            <Card handleInputChange={this.handleInputChange} {...this.state} radio={this.radioButtons} />
             
 
-            <DataCard medicines={this.state.medicines}/>
+            <DataCard medicines={this.state.medicines} loadUserMeds={this.loadUserMeds}/>
             </div>
           <div className="container">
           {/* <div className="col m6"> */}

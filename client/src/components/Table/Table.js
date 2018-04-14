@@ -20,28 +20,47 @@ import TableData from "../../components/TableData";
 
   render() {
     return (
-
-    <div className = "col m6 s6">
-           
-          
-             <ul>
+      <div className="col m6 s6">
+   <div className="card"> 
+   <div className="card-content">  
+    
+      <table className="responsive-table centered">      
+          <thead>
+            <tr>
+              <th>Medicine</th>
+              <th>Indication</th>
+              <th>Dosage</th>
+              <th>Frequency</th>
+              <th>Notes</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+             
                 {this.props.medicines.map(meds => (
-                  <li key={meds._id}>
+                  <tr key={meds._id}>
                   
                       <strong>
                       
-                        {meds.medicine} 
+                        <td> {meds.medicine}</td>
+                        <td>{meds.indication}</td>
+                        <td>{meds.dosage}</td>
+                        <td>{meds.frequency}</td>
+                        <td>{meds.notes}</td>
+                        <DeleteButton /> 
                       </strong>
                  
                 
-                  </li>
+                  </tr>
                 ))}
               
-              </ul>
-           
+              
+           </tbody>
              
          
-
+      </table>
+      </div>
+      </div>
       </div>
       );
 }

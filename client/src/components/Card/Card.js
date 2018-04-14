@@ -45,7 +45,9 @@ export default class Card extends Component {
               label="Dosage"
             />
             <RadioButtons 
-              onChange = {this.props.handleInputChange}/>
+              onChange = {this.props.handleInputChange}
+              ref = {this.props.radio}
+              />
             <Input
               value={this.props.instructions}
               onChange={this.props.handleInputChange}

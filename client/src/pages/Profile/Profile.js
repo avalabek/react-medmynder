@@ -6,6 +6,7 @@ import Card from "../../components/Card";
 // import Row from "../../components/Row";
 import "./Profile.css";
 import DataCard from "../../components/DataCard";
+import Nav from '../../components/Nav';
 import EditButton from "../../components/EditButton";
 import API from "../../utils/API";
 
@@ -83,6 +84,7 @@ class Profile extends Component {
   render() {
     return (
       <div>
+     
         <br />
         <div className="container">
           <div className="row">
@@ -90,7 +92,7 @@ class Profile extends Component {
             <Card handleInputChange={this.handleInputChange} {...this.state} />
             
 
-            <DataCard medicines={this.state.medicines}/>
+            <DataCard medicines={this.state.medicines} />
             </div>
           <div className="container">
           {/* <div className="col m6"> */}

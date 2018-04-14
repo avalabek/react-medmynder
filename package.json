@@ -1,28 +1,30 @@
 {
-  "name": "react-medmynder",
+  "name": "medmynder",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "body-parser": "^1.18.2",
-    "express": "^4.16.3",
-    "mongoose": "^5.0.12"
-  },
-  "devDependencies": {},
   "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "seed": "node scripts/seedDB.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "installDeps": "yarn && cd client && yarn"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/avalabek/react-medmynder.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/avalabek/react-medmynder/issues"
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
   },
-  "homepage": "https://github.com/avalabek/react-medmynder#readme"
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.7",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "twilio": "^3.14.0"
+  }
 }

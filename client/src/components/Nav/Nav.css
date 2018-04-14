@@ -1,44 +1,19 @@
-.navbar {
-    
-    background-color: #a1c9c8;
-    /* background-color:#C58882; */
-    font-family: 'IBM Plex Sans',
-    sans-serif;
-    font-size: 60px;
-    :hover 
-      color: white;
-    
-  }
-
-a {
-  font-size: 30px;
+.header {
+  background-color: #a1c9c8;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 40px;
   font-weight: bold;
-  color:white;
-}
-/* trying to get hover not to be red */
-nav ul a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-/* .indigo-text.text-accent-4 {
-  color: #304ffe !important;}
-
-nav ul li {
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
-  float: left;
-  padding: 0;
 }
 
-nav ul li.active {
-  background-color: rgba(0, 0, 0, 0.1);
+.app-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 60px;
+  margin: 0px;
 }
 
-nav ul a {
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
-  font-size: 1rem;
-  color: #fff;
-  display: block;
-  padding: 0 15px;
-  cursor: pointer;
-} */
+
+@keyframes app-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+

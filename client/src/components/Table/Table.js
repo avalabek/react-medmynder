@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Table.css";
 import DeleteButton from "../../components/DeleteButton";
 import TableData from "../../components/TableData";
+import API from "../../utils/API";
 
 //question: this is both in profile page and here, so there is unnecessary duplication
 //does that mean that it should only be in profile page, but how can the child(table)
@@ -16,6 +17,21 @@ import TableData from "../../components/TableData";
 
   //   };
   // }
+
+  
+
+
+
+
+
+deleteMed = id => {
+    API.deleteMed(id)
+    .then(res => this.props.loadUserMeds())
+    .catch(err => console.log(err))
+  };
+
+
+
 
 
   render() {

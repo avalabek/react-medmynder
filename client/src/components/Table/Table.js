@@ -20,10 +20,11 @@ import TableData from "../../components/TableData";
 
   render() {
     return (
+      
       <div className="col m6 s6">
    <div className="card"> 
    <div className="card-content">  
-    
+            <br /><br /><br /><br /><br /><br /><br />
       <table className="responsive-table centered">      
           <thead>
             <tr>

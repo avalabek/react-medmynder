@@ -17,6 +17,7 @@ export default {
   },
   // Deletes the medicine with the given id
   deleteMed: function (id) {
+    console.log("deleteMed axios hit")
     return axios.delete("/api/medicine/" + id);
   },
   // Saves a medicine to the database

@@ -22,10 +22,14 @@ export default class Card extends Component {
 
   render() {
     return (
+      <div>
+      <h1>{this.props.first}</h1>
     <div className="col m6">
       <div className="card">
         <div className="card-content">
         <h4>Add a new medication</h4>
+        
+
             <Input
               value={this.props.medicine}
               onChange={this.props.handleInputChange}
@@ -45,7 +49,9 @@ export default class Card extends Component {
               label="Dosage"
             />
             <RadioButtons 
-              onChange = {this.props.handleInputChange}/>
+              onChange = {this.props.handleInputChange}
+              ref = {this.props.radio}
+              />
             <Input
               value={this.props.instructions}
               onChange={this.props.handleInputChange}
@@ -69,6 +75,7 @@ export default class Card extends Component {
           <div id="test5">Test 2</div>
           <div id="test6">Test 3</div>
         </div> */}
+      </div>
       </div>
       </div>
     );

@@ -13,14 +13,14 @@ Please note that the most complete branch to work with at the moment of writing 
 First make sure you have 
 ```
 mongod 
-
+```
 running in a separate terminal.
 
 Then install front and backend dependencies in the client directory.
 ```
 cd client
 yarn install
-
+```
 
 Then go back to the root directory 
 ```

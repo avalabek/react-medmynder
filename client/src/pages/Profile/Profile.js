@@ -34,7 +34,7 @@ class Profile extends Component {
   loadUserMeds = () => {
     API.getUser(this.props.patientID)
       .then(res => {
-        console.log("res.data.medicines", res.data.medicines);
+        // console.log("res.data.medicines", res.data.medicines);
         this.setState({
           userName: res.data.first +" " + res.data.last,
           medicines: res.data.medicines,
@@ -68,7 +68,7 @@ class Profile extends Component {
     event.preventDefault();
     alert("Form submitted.");
     console.log("handleFormSubmit function called");
-    console.log("patient id", this.props.patientID); //isn't being passed from App.js
+    console.log("patient id", this.props.patientID); 
     API.saveMed({
       medicine: this.state.medicine,
       indication: this.state.indication,
@@ -79,7 +79,7 @@ class Profile extends Component {
       patient: this.props.patientID
     })
       .then(res => {
-        console.log("handleFormsubmit->API.saveMed->then", res);
+        // console.log("handleFormsubmit->API.saveMed->then", res);
         this.radioButtons.current.resetOptions();
         this.loadUserMeds();
         // this.getMed({patient: this.props.patientID});

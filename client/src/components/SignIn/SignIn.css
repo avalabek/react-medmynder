@@ -1,5 +1,13 @@
+.card {
+	height:600px;
+	width:400px;
+}
+
 #form{
 	background:#C0C0C0;
 	height:400px;
 	width:400px;
+}
+#formBtn {
+	text-align: center;
 }

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 
-import { Input, FormBtn } from "../Form";
-
+import { FormBtn } from "../Form";
+import Input from "../../components/Input";
 import "./SignIn.css";
 
 
@@ -40,58 +40,63 @@ class SignIn extends Component {
 
   render() {
     return (
-     
-      <div className="container" >
+      
+        <div className="container">
+        <div className="row">
+        <br /> <br /> 
+        <div className="col m3"></div>
+        <div className="col m9">
+          <div className="card">
+            <div className="card-content">
+              <h4>Welcome.</h4>
+              <form>
+              <h5 className="header-center"> Log In </h5>
 
-      <br /> <br />
-    
-      <form >
-      <div className="row" >
+              {/* <Input
+                value={this.state.username}
+                onChange={this.handleInputChange.bind(this)}
+                name="username"
+                placeholder="Username"
+              /> */}
 
-      <div className="col s3" />
-      <div className="col s6" >
-      <img 
-        src={"../images/loginicon.png"} 
-        alt="Medication"
-        />
+              <Input
+                value={this.state.username}
+                onChange={this.handleInputChange.bind(this)}
+                name="username"
+                label="Username"
+              />
+                  <Input
+                    value={this.state.password}
+                    onChange={this.handleInputChange.bind(this)}
+                    name="password"
+                    label="Password" />
 
-      <h5 className="header-center"> Log In </h5>
-
-      <Input
-      value={this.state.username}
-      onChange={this.handleInputChange.bind(this)}
-      name="username"
-      placeholder="Username"
-      />
-
-      <Input
-      value={this.state.password}
-      onChange={this.handleInputChange.bind(this)}
-      name="password"
-      placeholder="Password"
-      />
-
-      <FormBtn onClick={this.handleFormSubmit}>
-      Sign In
+              <FormBtn onClick={this.handleFormSubmit} id="formBtn">
+                Sign In
       </FormBtn>
-      <br/><br/>
-      <a class="google-btn"  href="/auth/google"> Sign in with Google+ </a>
-      <br/> <br/> 
+              <br /><br />
+              <a class="google-btn" href="/auth/google"> Sign in with Google+ </a>
+              <br /> <br />
 
-      <h5 className="header-center"> New User? Register Here </h5>
-      <FormBtn>
-      Register
+              <h5 className="header-center"> New User? Register Here </h5>
+              <FormBtn>
+                Register
       </FormBtn>
-
-      </div>
-      </div>
-
-
       </form>
-     
+<br /> <br /><br />
 
-      </div>   
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      
+      
     );
+
+
+      
+    
   }
 }
 

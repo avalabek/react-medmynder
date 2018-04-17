@@ -6,7 +6,7 @@ import SignIn from "../../components/SignIn";
 
 const Landing = () => (
   <div>
-  	<ImageBanner />
+  	{/* <ImageBanner /> */}
   	<SignIn />
 
 

@@ -12,7 +12,7 @@ import Edit from './pages/Edit';
 class App extends Component {
   constructor(props){
     super(props)
-    this.state = { patientID: ""}
+    this.state = { patientID: " "}
   }
 
 

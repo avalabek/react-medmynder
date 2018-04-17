@@ -18,7 +18,7 @@ const Nav = () => (
           <li />
           <li>
 
-            <Link to="/profile">Putting you back in control of your own health.</Link>
+            <Link to="/profile">Profile</Link>
 
           </li>
 

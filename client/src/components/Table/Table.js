@@ -79,7 +79,7 @@ import API from "../../utils/API";
                         <td> {meds.medicine}</td>
                         <td>{meds.indication}</td>
                         <td>{meds.dosage}</td>
-                        <td>{meds.frequency}</td>
+                        <td>{meds.frequency} time(s) a day</td>
                         <td>{meds.notes}</td>
                       <DeleteButton onClick={() => this.deleteMed(meds._id)} /> 
                       </strong>

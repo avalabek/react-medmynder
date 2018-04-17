@@ -24,13 +24,13 @@ module.exports = {
     textSchedule.hour = hour;
     textSchedule.minute = minute;
     
-
-    // console.log("schedule2", schedule);
-
     var text = schedule.scheduleJob(textSchedule, function() {
       sendFunction.sendText(userNumber, twilioNumber, messageBody);
     });
+
+    console.log("schedule", schedule)
     
+
     // sendFunction.sendText(userNumber, twilioNumber, "Initial Test From MedMynder");
   }
 };

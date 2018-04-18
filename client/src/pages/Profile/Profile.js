@@ -15,7 +15,8 @@ class Profile extends Component {
     super(props);
     console.log("props", props); //is empty string
     this.state = {
-      userName:"",
+
+      userName: "",
       medicines: [],
       medicine: "",
       indication: "",
@@ -25,7 +26,9 @@ class Profile extends Component {
       notes: ""
     };
 
+
   this.radioButtons = React.createRef();
+
   }
 
   componentDidMount() {
@@ -35,9 +38,11 @@ class Profile extends Component {
   loadUserMeds = () => {
     API.getUser(this.props.patientID)
       .then(res => {
-        console.log("res.data.medicines", res.data.medicines);
+        // console.log("res.data.medicines", res.data.medicines);
         this.setState({
-          userName:res.data.first + " " + res.data.last,
+
+          userName: res.data.first +" " + res.data.last,
+
           medicines: res.data.medicines,
           medicine: "",
           indication: "",
@@ -50,6 +55,14 @@ class Profile extends Component {
       .catch(err => console.log(err));
   };
 
+  // getUserName= ()=>{
+  //   API.getUser(this.props.patientID)
+  //   .then(res => {
+  //     console.log("res.data.first", res.data.first);
+  //        })
+    
+  // }
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -61,7 +74,7 @@ class Profile extends Component {
     event.preventDefault();
     alert("Form submitted.");
     console.log("handleFormSubmit function called");
-    console.log("patient id", this.props.patientID); //isn't being passed from App.js
+    console.log("patient id", this.props.patientID); 
     API.saveMed({
       medicine: this.state.medicine,
       indication: this.state.indication,
@@ -72,7 +85,7 @@ class Profile extends Component {
       patient: this.props.patientID
     })
       .then(res => {
-        console.log("handleFormsubmit->API.saveMed->then", res);
+        // console.log("handleFormsubmit->API.saveMed->then", res);
         this.radioButtons.current.resetOptions();
         this.loadUserMeds();
         // this.getMed({patient: this.props.patientID});
@@ -80,12 +93,8 @@ class Profile extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteMed = id => {
-    API.deleteMed(id)
-    .then(res => this.loadUserMeds())
-    .catch(err => console.log(err))
-  };
-// () => this.deleteMedicine(medicine._id)
+  
+// 
   render() {
     return (
       <div>
@@ -94,15 +103,18 @@ class Profile extends Component {
         <div className="container">
           <div className="row">
             
-            <Card handleInputChange={this.handleInputChange} {...this.state} radio={this.radioButtons}  first={this.state.userName} />
+
+            <Card handleInputChange={this.handleInputChange} {...this.state} radio={this.radioButtons} first={this.state.userName} />
             
 
-            <DataCard medicines={this.state.medicines} loadUserMeds={this.loadUserMeds} />
+            <DataCard medicines={this.state.medicines} loadUserMeds={this.loadUserMeds}/>
+
             </div>
           <div className="container">
           {/* <div className="col m6"> */}
             <SubmitButton onClick={this.handleFormSubmit} />
-            <br /> <br /> <br /> 
+            <br /> <br /> <br />
+            
         </div>
       </div>
       </div>

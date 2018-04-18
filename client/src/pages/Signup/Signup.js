@@ -37,11 +37,10 @@ class Signup extends React.Component {
       phone: "",
       dateOfBirth: "",
       gender:"",
-      email: "",
+      username: "",
       password: ""
     });
 ;
-       
       alert("Form submitted.")
       API.saveUser({
         first: this.state.firstName,
@@ -49,7 +48,7 @@ class Signup extends React.Component {
         phone: this.state.phone,
         dob: this.state.dateOfBirth,
         gender: this.state.gender,
-        email: this.state.email,
+        username: this.state.username,
         password: this.state.password
       })
       //what do we want to do here? prob redirect
@@ -57,6 +56,7 @@ class Signup extends React.Component {
       // res redirect in es6 also need to clear page
       .then(patientID=> {
         console.log("this is the patient ID:", patientID)
+        console.log("first name?", this.state.firstName)
         this.props.setUser(patientID)})
       .catch(err => console.log(err));
   //   
@@ -105,11 +105,10 @@ class Signup extends React.Component {
               label="Gender"
             />  
             <Input
-              value={this.state.email}
+              value={this.state.username}
               onChange={this.handleInputChange}
-              name="email"
-              label="Email"
-              type="email"
+              name="username"
+              label="Username"
             />
             <Input
               value={this.state.password}

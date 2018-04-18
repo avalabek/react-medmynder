@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import ImageBanner from "../../components/ImageBanner";
 
 import {  FormBtn } from "../Form";
 import Input from "../../components/Input";
@@ -29,11 +30,15 @@ class SignIn extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.username && this.state.password) {
-      API.authUser({
+
+      API.login({
         username: this.state.username,
         password: this.state.password
       })
-        .then()
+        .then(patientID=> {
+        console.log("this is the patient ID:", patientID)
+        console.log("first name?", this.state.firstName)
+        this.props.setUser(patientID)})
         .catch(err => console.log(err));
     }
   };
@@ -44,6 +49,7 @@ class SignIn extends Component {
 
       
      
+
 <div className="container">
 
        
@@ -97,6 +103,7 @@ class SignIn extends Component {
                     </div>
                     </div>
                    
+
      
   
     );

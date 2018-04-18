@@ -4,7 +4,7 @@ import './App.css';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import Profile from './pages/Profile';
-// import Landing from './pages/Landing';
+import Landing from './pages/Landing';
 import Edit from './pages/Edit';
 import SignIn from './components/SignIn';
 // import API from './utils/API.js';
@@ -31,10 +31,10 @@ class App extends Component {
       <div className="App">
       
           <Route exact path="/signup" render={(props) => <Signup {...this.props} setUser={this.setUser}/>} />  
-          <Route exact path="/" render={(props) => <SignIn {...this.props} setUser={this.setUser}/>} />  
+          {/* <Route exact path="/" render={(props) => <SignIn {...this.props} setUser={this.setUser}/>} />   */}
           {/* sending this patientID prop to the profile component is not working */}
           <Route exact path="/profile" render={(props) => <Profile {...this.props} patientID={this.state.patientID}/>} />
-          {/* <Route exact path="/" component={Landing} /> */}
+          <Route exact path="/" component={Landing} />
           <Route exact path="/edit" component={Edit} />
       </div>
        </Router>

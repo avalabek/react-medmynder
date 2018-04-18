@@ -64,6 +64,8 @@ class Signup extends React.Component {
 
   render() {
     return (
+      <div>
+        <Nav />
       <div className="container">
       <form>
         
@@ -127,6 +129,7 @@ class Signup extends React.Component {
         />
         
      </form>   
+     </div>
      </div>
     );
   }

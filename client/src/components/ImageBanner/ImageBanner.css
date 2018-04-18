@@ -2,30 +2,30 @@
 	height:650px;
 	 background: url("../../images/meds7.jpg");
 	 background-repeat: no-repeat;
-<<<<<<< HEAD
-  background-size: 100%;
-  background-color: rgba(255,0,0,10);
-=======
-  background-size:75%;
+	
+
+  background-size:100%;
  background-position: center;
  
->>>>>>> 02853fe145073dc6848721677d67dc97393d42d2
-  padding-top: 100px;
+ 
+  position:relative;
+
+
 
      /*opacity: .4; */
    /* /*height: 100em;*/
 }
 
 #banner{
-	font-family: 'Spectral SC', serif;
+	font-family: 'IBM Plex Sans', sans-serif;
 	text-align: center;
-	margin-bottom: 0px;
+	margin-bottom: 30px;
 	
 
 }
 
 #banner2{
-	font-family: 'Spectral SC', serif;
+	font-family: 'IBM Plex Sans', sans-serif;
 	text-align: center;
 	margin-top: 0px;
 
@@ -34,10 +34,11 @@
 .logo{
 	float:left;
 	margin-left: 70px;
+
 }
 
 .logo2{
-	float:left;
+	
 	font-size: 20px;
 	
 }

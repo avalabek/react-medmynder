@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-        <Nav /> 
+      
           <Route exact path="/signup" render={(props) => <Signup {...this.props} setUser={this.setUser}/>} />  
           <Route exact path="/" render={(props) => <SignIn {...this.props} setUser={this.setUser}/>} />  
           {/* sending this patientID prop to the profile component is not working */}

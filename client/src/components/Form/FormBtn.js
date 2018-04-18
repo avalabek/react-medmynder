@@ -6,7 +6,7 @@ export const FormBtn = props => (
     <Link to="/signup">
       <button
         {...props}
-        className="waves-effect waves-light btn"
+        className="waves-teal btn"
         type="submit"
         name="action"
         style={{ fontFamily: "IBM Plex Sans" }}

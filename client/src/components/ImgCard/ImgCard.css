@@ -1,0 +1,20 @@
+#imgcard {
+	height:500px;
+}
+
+#imgcardrow {
+	margin-top: 300px;
+}
+
+
+#features {
+	font-family: 'IBM Plex Sans', sans-serif;
+	text-align: center;
+
+}
+
+.image {
+	width: 400px;
+	height:390px;
+}
+

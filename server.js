@@ -1,12 +1,12 @@
 const express = require("express");
-const passport = require('passport');
+// const passport = require('passport');
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
-const morgan       = require('morgan');
-const cookieParser = require('cookie-parser');
-const session      = require('express-session');
+// const morgan       = require('morgan');
+// const cookieParser = require('cookie-parser');
+// const session      = require('express-session');
 
 
 // const cookieSession = require('cookie-session');
@@ -22,16 +22,16 @@ app.use(bodyParser.json());
 app.use(express.static("client/build"));
 
 
-require('./config/passport')(passport); // pass passport for configuration
+// require('./config/passport')(passport); // pass passport for configuration
 
 // set up our express application
-app.use(morgan('dev')); // log every request to the console
-app.use(cookieParser()); // read cookies (needed for authh
+// app.use(morgan('dev')); // log every request to the console
+// app.use(cookieParser()); // read cookies (needed for authh
 
 // required for passport
-app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
+// app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+// app.use(passport.initialize());
+// app.use(passport.session()); // persistent login sessions
 
 // routes for everything else
 app.use(routes);

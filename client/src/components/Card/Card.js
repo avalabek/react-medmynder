@@ -51,7 +51,7 @@ export default class Card extends Component {
             <RadioButtons 
               onChange = {this.props.handleInputChange}
               ref = {this.props.radio}
-              />
+              required/>
             <Input
               value={this.props.instructions}
               onChange={this.props.handleInputChange}

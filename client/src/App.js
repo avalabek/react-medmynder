@@ -13,7 +13,7 @@ import SignIn from './components/SignIn';
 class App extends Component {
   constructor(props){
     super(props)
-    this.state = { patientID: ""}
+    this.state = { patientID: "5ad0d7b1e1b0ab2c104d690f"}
   }
 
 

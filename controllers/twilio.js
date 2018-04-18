@@ -12,7 +12,7 @@ module.exports = {
     console.log("minute", minute);
     console.log("userNumber", userNumber); 
     console.log("twilioNumber", twilioNumber);
-    console.log('medID', medID);
+    // console.log('medID', medID);
     var messageBody =
       "Hi " + userName + ", it's time to take your " + medicine + ". " + instructions;
     console.log ("message body", messageBody)
@@ -25,11 +25,11 @@ module.exports = {
     textSchedule.hour = hour;
     textSchedule.minute = minute;
     
-    // var text = schedule.scheduleJob(medID, textSchedule, function() {
-    //   sendFunction.sendText(userNumber, twilioNumber, messageBody);
-    // });
+    var text = schedule.scheduleJob(medID, textSchedule, function() {
+      sendFunction.sendText(userNumber, twilioNumber, messageBody);
+    });
 
-    console.log("scheduledJobs", schedule.scheduledJobs);
+    // console.log("scheduledJobs", schedule.scheduledJobs);
     
 
     // sendFunction.sendText(userNumber, twilioNumber, "Initial Test From MedMynder");

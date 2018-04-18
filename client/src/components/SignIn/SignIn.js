@@ -53,7 +53,7 @@ class SignIn extends Component {
 <div className="container">
 
        
-        <div className="card " id="signincard" className="text-align center">
+        <div className="card " id="signincard" className="text-align center z-depth-2">
         
 
           <div className="card-content" className="text-align center">
@@ -62,7 +62,7 @@ class SignIn extends Component {
              <form className = "responsive-table">
                 <div className="row" >
 
-                     <div className="col s1" / >
+                     <div className="col s1" />
                      <div className="col s10"  > <br />
                      <img src={require("../../images/loginicon2.png")} alt={""} id="icon"/>
                
@@ -81,6 +81,7 @@ class SignIn extends Component {
                         onChange={this.handleInputChange.bind(this)}
                         name="password"
                         label="Password"
+                        type="password"
                         />
 
                         <FormBtn onClick={this.handleFormSubmit}>

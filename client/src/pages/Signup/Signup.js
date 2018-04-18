@@ -6,6 +6,7 @@ import Input from "../../components/Input";
 // import Jumbotron from "../../components/Jumbotron";
 // import Profile from "../../pages/Profile";
 import API from "../../utils/API"
+import Nav from "../../components/Nav";
 
 
 class Signup extends React.Component {

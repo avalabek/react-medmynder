@@ -98,6 +98,7 @@ class Profile extends Component {
   render() {
     return (
       <div>
+        <Nav />
      
         <br />
         <div className="container">

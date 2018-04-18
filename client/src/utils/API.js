@@ -6,6 +6,17 @@ export default {
     console.log("axios getUser hit, id that is passed in is:", id);
     return axios.get("/api/patient/" + id);
   },
+
+  login: function(userObject) {
+    console.log("axios login hit, username that is passed in is:", userObject)
+    return axios.post("/api/login/", userObject)
+    .then(patientInfo => { //patientInfo == dbModel, returned from user creation route
+        console.log("patient info", patientInfo);
+        var ptID = patientInfo.data._id;
+        console.log("ptID", ptID);
+        return ptID;
+      });
+  },
   // Gets all meds but we need this to get all meds
   // for a specific user?
   getMeds: function () {

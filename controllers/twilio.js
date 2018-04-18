@@ -6,12 +6,13 @@ const client = require("twilio")(accountSid, authToken);
 const sendFunction = require("./sendText.js");
 
 module.exports = {
-  twilio: function(hour,minute,userNumber,userName,medicine,instructions,twilioNumber, next) {
+  twilio: function(hour,minute,userNumber,userName,medicine,instructions,twilioNumber) {
     console.log("twilio function hit");
     console.log("hour", hour);
     console.log("minute", minute);
     console.log("userNumber", userNumber); 
-    console.log("twilioNumber", twilioNumber)
+    console.log("twilioNumber", twilioNumber);
+    console.log('medID', medID);
     var messageBody =
       "Hi " + userName + ", it's time to take your " + medicine + ". " + instructions;
     console.log ("message body", messageBody)
@@ -24,11 +25,11 @@ module.exports = {
     textSchedule.hour = hour;
     textSchedule.minute = minute;
     
-    var text = schedule.scheduleJob(textSchedule, function() {
-      sendFunction.sendText(userNumber, twilioNumber, messageBody);
-    });
+    // var text = schedule.scheduleJob(medID, textSchedule, function() {
+    //   sendFunction.sendText(userNumber, twilioNumber, messageBody);
+    // });
 
-    console.log("schedule", schedule)
+    console.log("scheduledJobs", schedule.scheduledJobs);
     
 
     // sendFunction.sendText(userNumber, twilioNumber, "Initial Test From MedMynder");

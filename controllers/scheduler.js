@@ -38,7 +38,7 @@ module.exports={
         hour = notifications[2].hour;
         min = notifications[2].min;
       }
-      twilioFunction.twilio(hour,min,userNumber,userName,medicine,instructions,twilioNumber);
+      twilioFunction.twilio(hour,min,userNumber,userName,medicine,instructions,twilioNumber, medID);
     }
   }
 }

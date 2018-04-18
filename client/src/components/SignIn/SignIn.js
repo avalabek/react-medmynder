@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import ImageBanner from "../../components/ImageBanner";
 
 import { Input, FormBtn } from "../Form";
 
@@ -28,11 +29,14 @@ class SignIn extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.username && this.state.password) {
-      API.saveBook({
+      API.login({
         username: this.state.username,
         password: this.state.password
       })
-        .then()
+        .then(patientID=> {
+        console.log("this is the patient ID:", patientID)
+        console.log("first name?", this.state.firstName)
+        this.props.setUser(patientID)})
         .catch(err => console.log(err));
     }
   };
@@ -42,6 +46,7 @@ class SignIn extends Component {
     return (
      
       <div className="container" >
+      <ImageBanner />
 
       <br /> <br />
     

@@ -35,6 +35,7 @@ module.exports = {
             const frequency = medicine.frequency; //grabbing the medicine's frequency
             console.log("frequency", frequency);
             const instructions = medicine.instructions; //grabbing the medicine's instructions
+            // const medID = medicine._id;
             scheduler.scheduler(frequency, medName, instructions, userName, userNumber);
             res.json(medicine);
             

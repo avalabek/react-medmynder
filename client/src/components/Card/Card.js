@@ -22,8 +22,8 @@ export default class Card extends Component {
 
   render() {
     return (
-      <div>
-      <h1>{this.props.first}</h1>
+  <div>
+    <h3>Welcome, {this.props.userName} </h3>
     <div className="col m6">
       <div className="card">
         <div className="card-content">

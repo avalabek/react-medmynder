@@ -1,8 +1,9 @@
 .header {
-  background-color: #a1c9c8;
+  background-color: white;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 40px;
   font-weight: bold;
+  color:black;
 }
 
 .app-logo {

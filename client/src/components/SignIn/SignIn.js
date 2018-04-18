@@ -3,6 +3,8 @@ import API from "../../utils/API";
 import ImageBanner from "../../components/ImageBanner";
 
 import { Input, FormBtn } from "../Form";
+import swal from "sweetalert";
+
 
 import "./SignIn.css";
 
@@ -35,9 +37,9 @@ class SignIn extends Component {
       })
         .then(patientID=> {
         console.log("this is the patient ID:", patientID)
-        console.log("first name?", this.state.firstName)
+        // console.log("first name?", this.state.fircstName) 
         this.props.setUser(patientID)})
-        .catch(err => console.log(err));
+        .catch(err => swal("Error", "Username or Password Entered Incorrectly", "error"));
     }
   };
   

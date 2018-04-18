@@ -10,6 +10,7 @@
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.1.2",
     "react-scripts": "1.0.14",
+    "sweetalert": "^2.1.0",
     "twilio": "^3.15.0"
   },
   "scripts": {

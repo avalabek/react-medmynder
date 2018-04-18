@@ -8,6 +8,7 @@ import "./Profile.css";
 import DataCard from "../../components/DataCard";
 import EditButton from "../../components/EditButton";
 import API from "../../utils/API";
+import swal from "sweetalert";
 
 class Profile extends Component {
   constructor(props) {
@@ -66,7 +67,7 @@ class Profile extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    alert("Form submitted.");
+    // alert("Form submitted.");
     console.log("handleFormSubmit function called");
     console.log("patient id", this.props.patientID); 
     API.saveMed({
@@ -80,11 +81,12 @@ class Profile extends Component {
     })
       .then(res => {
         // console.log("handleFormsubmit->API.saveMed->then", res);
+        swal("Success!", "Added Medication", "success"); //if the AJAX request was error-free and the medication was added to the db successfully, display success sweet-alert
         this.radioButtons.current.resetOptions();
         this.loadUserMeds();
         // this.getMed({patient: this.props.patientID});
       })
-      .catch(err => console.log(err));
+      .catch(err =>swal("Medication Not Added", "Please Select Frequency", "error")); //if errors come back(either from axios or the db), display error sweet-alert; almost always going to be a problem where the user forgets to select frequency
   };
 
   

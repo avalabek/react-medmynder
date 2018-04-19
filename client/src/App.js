@@ -36,7 +36,7 @@ class App extends Component {
           <Route exact path="/profile" render={(props) => <Profile {...this.props} patientID={this.state.patientID}/>} />
           {/* <Route exact path="/" component={Landing} /> */}
           <Route exact path="/edit" component={Edit} />
-      <Auth />
+      
       </div>
        </Router>
     );

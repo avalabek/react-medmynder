@@ -32,7 +32,7 @@ resetOptions =()=>{
   render() {
     return (
   <form action="#">
-    {/* <div className="container"> */}
+             {/* <div className="container"> */}
     <div className="row">
       <span>
       <label>

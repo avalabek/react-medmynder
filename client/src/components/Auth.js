@@ -6,6 +6,8 @@ import {
   Redirect,
   withRouter
 } from 'react-router-dom'
+import Profile from "../pages/Profile";
+
 
 //this is a dummy object; will use our real authorization here
 const fakeAuth = {
@@ -46,12 +48,18 @@ class Login extends React.Component {
     return (
       <div>
         <p>You must log in to view the page</p>
-        <button onClick={this.login}>Log in</button>
+        <button 
+          onClick={this.login}
+          className="waves-effect waves-light btn-large"
+        
+        name="action"
+        style={{ fontFamily: "IBM Plex Sans" }}
+          >Log in</button>
       </div>
     )
   }
 }
-// Private Route checks if the user is authenticated, if they are,
+// Private Route It checks if the user is authenticated, if they are,
 // it renders the "component" prop. If not, it redirects
 // the user to /login.
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -68,7 +76,13 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 const AuthButton = withRouter(({ history }) => (
   fakeAuth.isAuthenticated ? (
     <p>
-      Welcome! <button onClick={() => {
+      Welcome! 
+      <button 
+      className="waves-effect waves-light btn-large"
+        
+        name="action"
+        style={{ fontFamily: "IBM Plex Sans" }}
+      onClick={() => {
         fakeAuth.signout(() => history.push('/'))
       }}>Sign out</button>
     </p>
@@ -89,7 +103,7 @@ export default function AuthExample () {
         </ul>
         <Route path="/public" component={Public}/>
         <Route path="/login" component={Login}/>
-        <PrivateRoute path='/protected' component={Protected} />
+        <PrivateRoute path='/protected' component={Profile} />
       </div>
     </Router>
   )

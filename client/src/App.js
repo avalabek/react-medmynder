@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect, withRouter } from "react-router-dom";
 import './App.css';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
@@ -8,7 +8,7 @@ import Profile from './pages/Profile';
 import Edit from './pages/Edit';
 import SignIn from './components/SignIn';
 // import API from './utils/API.js';
-
+import Auth from './components/Auth';
 
 class App extends Component {
   constructor(props){
@@ -24,7 +24,7 @@ class App extends Component {
     console.log("patientID passed in from Signup", this.state.patientID); //Signup component is sending userID here, but it is not being sent to the Profile component as a prop
     
   }
-
+  
   render() {
     return (
       <Router>
@@ -36,6 +36,7 @@ class App extends Component {
           <Route exact path="/profile" render={(props) => <Profile {...this.props} patientID={this.state.patientID}/>} />
           {/* <Route exact path="/" component={Landing} /> */}
           <Route exact path="/edit" component={Edit} />
+      <Auth />
       </div>
        </Router>
     );

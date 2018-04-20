@@ -38,17 +38,13 @@ module.exports = {
     },
     create: function (req, res) {
         console.log("patient controller req.body", req.body)
-        // db.Patient
-        //     .create(req.body)
-        //     .then(dbModel => res.json(dbModel))
-        //     .catch(err => res.status(422).json(err));
-        //     // process the signup form
-        passport.authenticate('local-signup', {
-            successRedirect : '/profile', // redirect to the secure profile section
-            failureRedirect : '/signup', // redirect back to the signup page if there is an error
-            failureFlash : true // allow flash messages
-        });
-    },
+        db.Patient
+            .create(req.body)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+            // process the signup form
+
+        },
     update: function (req, res) {
         db.Patient
             .findOneAndUpdate({ _id: req.params.id }, req.body)

@@ -5,7 +5,7 @@ import { Redirect } from "react-router-dom";
 
 import { Input, FormBtn } from "../Form";
 import swal from "sweetalert";
-import Nav from "../../components/Nav";
+import Nav from "../../components/Nav"; //importing navbar
 
 
 import "./SignIn.css";

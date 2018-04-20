@@ -34,8 +34,27 @@ deleteMed = id => {
 
 
 
+   
+   deleteMed = id => {
+     alert("delete button hit");
+     API.deleteMed(id)
+       .then(res => this.props.loadUserMeds())
+      // .then(window.location.reload())
+       .catch(err => console.log(err))
+   };
+
   render() {
+    // if (this.meds.frequency == 1) {
+    //   var freq = "Once A Day"
+    // }
+    // else if (this.meds.frequency == 2) {
+    //   var freq = "Twice A Day"
+    // }
+    // else if {this.meds.frequency == 3} {
+    //   var freq = "Three Times A Day"
+    // }
     return (
+
 
 <div className= "col m6">
       <div className="card" id="dataCard">
@@ -48,6 +67,7 @@ deleteMed = id => {
           <thead>
             <tr>
              
+
               <th>Medicine</th>
               <th>Indication</th>
               <th>Dosage</th>
@@ -56,6 +76,7 @@ deleteMed = id => {
               <th>Delete</th>
             </tr>
           </thead>
+
 
 
   {this.props.medicines.map(meds => (
@@ -83,7 +104,7 @@ deleteMed = id => {
 
               <td>
                 <strong>
-                  {meds.frequency} 
+                  {meds.frequency} time(s) a day
                 </strong>
               </td>
 
@@ -109,6 +130,7 @@ deleteMed = id => {
                 </div>
 
           </div>
+
       </div>
   </div>
       

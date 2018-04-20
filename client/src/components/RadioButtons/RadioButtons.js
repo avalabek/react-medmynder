@@ -23,6 +23,11 @@ handleOptionChange (event){
   });
   this.props.onChange(event);
 }
+resetOptions =()=>{
+  this.setState ( {
+    selectedOption: ""
+  });
+}
 
 resetOptions = () => {
   this.setState ( {

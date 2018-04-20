@@ -28,6 +28,8 @@ export default class Card extends Component {
       <div className="card">
         <div className="card-content">
         <h4>Add a new medication</h4>
+        
+
             <Input
               value={this.props.medicine}
               onChange={this.props.handleInputChange}

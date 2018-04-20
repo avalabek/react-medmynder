@@ -16,10 +16,12 @@ const patientSchema = new Schema({
   gender: {
     type: String
   },
-  // age: {
-  //   type: Number,
-  //   required: true
-  // }, can be calculated from dob
+  username: {
+    type: String
+  },
+  password: {
+    type: String
+  },
   phone: {
     type: Number,
     required: true

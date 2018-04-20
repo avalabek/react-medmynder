@@ -2,6 +2,21 @@ const db = require("../models");
 const passport = require('passport');
 
 module.exports = {
+    findByUsername: function(req, res) {
+        console.log("findByUsername hit");
+        console.log("request coming from login", req.body);
+        const patientLogin = {
+            username: req.body.username,
+            password: req.body.password
+        }
+        db.Patient 
+            .findOne(patientLogin)
+            .then(patient => {
+                console.log("found patient", patient)
+                res.json(patient);
+
+            })
+    },
     findAll: function (req, res) {
         db.Patient
             .find(req.query)    

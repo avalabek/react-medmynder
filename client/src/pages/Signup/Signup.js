@@ -1,11 +1,15 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 import "./Signup.css";
+// import { browserHistory } from "react-router";
 import SubmitButton from "../../components/SubmitButton";
 import Input from "../../components/Input";
+
 // import InlineInput from "../../components/InlineInput";
 // import Jumbotron from "../../components/Jumbotron";
 // import Profile from "../../pages/Profile";
 import API from "../../utils/API"
+import Nav from '../../components/Nav';
 
 
 class Signup extends React.Component {
@@ -18,7 +22,8 @@ class Signup extends React.Component {
       dateOfBirth: "",
       gender:"",
       email: "",
-      password: ""
+      password: "",
+      signedup: ""
     };
   }
   handleInputChange = event => {
@@ -41,7 +46,7 @@ class Signup extends React.Component {
       password: ""
     });
 ;
-      alert("Form submitted.")
+      // alert("Form submitted.")
       API.saveUser({
         first: this.state.firstName,
         last: this.state.lastName,
@@ -57,13 +62,19 @@ class Signup extends React.Component {
       .then(patientID=> {
         console.log("this is the patient ID:", patientID)
         console.log("first name?", this.state.firstName)
-        this.props.setUser(patientID)})
+        this.props.setUser(patientID)
+        this.setState({signedup:"true"})})
       .catch(err => console.log(err));
   //   
    };
 
   render() {
+    if (this.state.signedup == "true") {
+      return <Redirect to="/profile"/>
+    }
     return (
+      <div>
+      <Nav />
       <div className="container">
       <form>
         
@@ -90,6 +101,8 @@ class Signup extends React.Component {
               onChange={this.handleInputChange}
               name="phone"
               label="Phone"
+              type="tel"
+
               />
                     
             <Input
@@ -115,7 +128,9 @@ class Signup extends React.Component {
               onChange={this.handleInputChange}
               name="password"
               label="Password"
-              /> 
+              type="password"
+              />
+               
                  
            
           
@@ -127,6 +142,7 @@ class Signup extends React.Component {
         />
         
      </form>   
+     </div>
      </div>
     );
   }

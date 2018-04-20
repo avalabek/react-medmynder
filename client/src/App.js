@@ -7,15 +7,18 @@ import Profile from './pages/Profile';
 // import Landing from './pages/Landing';
 import Edit from './pages/Edit';
 import SignIn from './components/SignIn';
+// import { createHashHistory } from "history";
 // import API from './utils/API.js';
 
 
 class App extends Component {
   constructor(props){
     super(props)
+    // const history = createHashHistory()
     this.state = { patientID: ""}
   }
 
+  
 
   setUser = id => {
     this.setState({
@@ -29,7 +32,7 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-      
+
           <Route exact path="/signup" render={(props) => <Signup {...this.props} setUser={this.setUser}/>} />  
           <Route exact path="/" render={(props) => <SignIn {...this.props} setUser={this.setUser}/>} />  
           {/* sending this patientID prop to the profile component is not working */}

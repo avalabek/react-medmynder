@@ -5,14 +5,14 @@ table {
 th {
   font-size:15px;
 }
-/* @media only screen and (max-width: 992px) { */
-  table.responsive-table {
+
+/*table.responsive-table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     display: block;
     position: relative;
-    /* sort out borders */
+    /* sort out borders 
   }
   table.responsive-table td:empty:before {
     content: '\00a0';
@@ -60,8 +60,7 @@ th {
     border-bottom: none;
     padding: 0 10px;
   }
-  table.responsive-table thead {
+  /* table.responsive-table thead {
     border: 0;
     border-right: 1px solid rgba(0, 0, 0, 0.12);
-  }
-/* } */
+  } */

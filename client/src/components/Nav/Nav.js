@@ -9,25 +9,16 @@ const Nav = () => (
         <a href="/" data-target="mobile-demo" className="sidenav-trigger">
           <i class="material-icons">menu</i>
         </a>
-        <Link to="/" className="brand-logo center" />
-        Med<strong>MY</strong>nder<a>
+        <Link to="/" className="brand-logo" >Med<strong>MY</strong>nder<a
+        >
           {" "}
           <i className="fas fa-pills app-logo" />
-        </a>
+        </a></Link>
         <ul className="right hide-on-med-and-down">
           <li />
+          
           <li>
-
-            <Link to="/profile">Putting you back in control of your own health.</Link>
-
-          </li>
-
-          <li>
-            <Link to="/">Login</Link>
-          </li>
-
-          <li>
-            <Link to="/signup">REGISTER</Link>
+            <Link to="/">Log Out</Link>
           </li>
         </ul>
       </div>

@@ -31,18 +31,6 @@ deleteMed = id => {
   };
 
 
-
-
-
-   
-   deleteMed = id => {
-     alert("delete button hit");
-     API.deleteMed(id)
-       .then(res => this.props.loadUserMeds())
-      // .then(window.location.reload())
-       .catch(err => console.log(err))
-   };
-
   render() {
     // if (this.meds.frequency == 1) {
     //   var freq = "Once A Day"

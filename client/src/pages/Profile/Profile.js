@@ -100,6 +100,8 @@ class Profile extends Component {
   render() {
     return (
       <div>
+        <Nav />
+      <div>
       
      
         <br />
@@ -119,6 +121,7 @@ class Profile extends Component {
             <br /> <br /> <br />
             
         </div>
+      </div>
       </div>
       </div>
     );

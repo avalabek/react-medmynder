@@ -9,6 +9,7 @@ import Input from "../../components/Input";
 // import Jumbotron from "../../components/Jumbotron";
 // import Profile from "../../pages/Profile";
 import API from "../../utils/API"
+import Nav from '../../components/Nav';
 
 
 class Signup extends React.Component {
@@ -45,7 +46,7 @@ class Signup extends React.Component {
       password: ""
     });
 ;
-      alert("Form submitted.")
+      // alert("Form submitted.")
       API.saveUser({
         first: this.state.firstName,
         last: this.state.lastName,
@@ -72,6 +73,8 @@ class Signup extends React.Component {
       return <Redirect to="/profile"/>
     }
     return (
+      <div>
+      <Nav />
       <div className="container">
       <form>
         
@@ -139,6 +142,7 @@ class Signup extends React.Component {
         />
         
      </form>   
+     </div>
      </div>
     );
   }

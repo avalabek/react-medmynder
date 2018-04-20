@@ -5,6 +5,7 @@ import { Redirect } from "react-router-dom";
 
 import { Input, FormBtn } from "../Form";
 import swal from "sweetalert";
+import Nav from "../../components/Nav";
 
 
 import "./SignIn.css";
@@ -52,7 +53,8 @@ class SignIn extends Component {
       return <Redirect to="/profile" />;
     }
     return (
-     
+      <div>
+     <Nav />
       <div className="container" >
       <ImageBanner />
 
@@ -105,6 +107,7 @@ class SignIn extends Component {
      
 
       </div>   
+      </div>
     );
   }
 }

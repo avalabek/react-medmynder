@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import ImageBanner from "../../components/ImageBanner";
+import { Redirect } from "react-router-dom";
 
 import { Input, FormBtn } from "../Form";
 import swal from "sweetalert";
@@ -15,7 +16,8 @@ class SignIn extends Component {
     super(props);
     this.state = {
     username: "",
-    password: ""
+    password: "",
+    loggedin:""
   };
 }
 
@@ -38,13 +40,17 @@ class SignIn extends Component {
         .then(patientID=> {
         console.log("this is the patient ID:", patientID)
         // console.log("first name?", this.state.fircstName) 
-        this.props.setUser(patientID)})
-        .catch(err => swal("Error", "Username or Password Entered Incorrectly", "error"));
+        this.props.setUser(patientID)
+        this.setState({ loggedin: "true" });})
+      .catch(err => swal("Error", "Username or Password Entered Incorrectly", "error"));
     }
   };
   
 
   render() {
+    if (this.state.loggedin == "true") {
+      return <Redirect to="/profile" />;
+    }
     return (
      
       <div className="container" >
@@ -76,6 +82,7 @@ class SignIn extends Component {
       onChange={this.handleInputChange.bind(this)}
       name="password"
       placeholder="Password"
+      type="password"
       />
 
       <FormBtn onClick={this.handleFormSubmit}>

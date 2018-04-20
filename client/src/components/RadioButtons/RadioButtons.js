@@ -29,6 +29,12 @@ resetOptions =()=>{
   });
 }
 
+resetOptions = () => {
+  this.setState ( {
+    selectedOption: ""
+  });
+}
+
   render() {
     return (
   <form action="#">

@@ -6,6 +6,7 @@ import Card from "../../components/Card";
 // import Row from "../../components/Row";
 import "./Profile.css";
 import DataCard from "../../components/DataCard";
+import Nav from '../../components/Nav';
 import EditButton from "../../components/EditButton";
 import API from "../../utils/API";
 import swal from "sweetalert";
@@ -15,6 +16,7 @@ class Profile extends Component {
     super(props);
     console.log("props", props); //is empty string
     this.state = {
+
       userName: "",
       medicines: [],
       medicine: "",
@@ -24,7 +26,9 @@ class Profile extends Component {
       instructions: "",
       notes: ""
     };
-    this.radioButtons=React.createRef();
+
+
+  this.radioButtons = React.createRef();
 
   }
 
@@ -37,7 +41,9 @@ class Profile extends Component {
       .then(res => {
         // console.log("res.data.medicines", res.data.medicines);
         this.setState({
+
           userName: res.data.first +" " + res.data.last,
+
           medicines: res.data.medicines,
           medicine: "",
           indication: "",
@@ -94,14 +100,18 @@ class Profile extends Component {
   render() {
     return (
       <div>
+      
+     
         <br />
         <div className="container">
           <div className="row">
             
+
             <Card handleInputChange={this.handleInputChange} {...this.state} radio={this.radioButtons} first={this.state.userName} />
             
 
             <DataCard medicines={this.state.medicines} loadUserMeds={this.loadUserMeds}/>
+
             </div>
           <div className="container">
           {/* <div className="col m6"> */}

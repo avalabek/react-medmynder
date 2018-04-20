@@ -46,6 +46,13 @@ export default {
         return ptID;
       });
   },
+  //auth the user when logging in
+  authUser: function (userData) {
+    return axios.post("/login", userData)
+      .then(patientInfo => { //patientInfo == dbModel, returned from user creation route
+        console.log("patient info", patientInfo);
+      });
+  }
 
 
 };

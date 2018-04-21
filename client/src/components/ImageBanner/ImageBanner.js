@@ -3,11 +3,51 @@ import "./ImageBanner.css";
 
 const ImageBanner = ({ children }) => (
 
-	<div className="section no-pad-bot" id="index-banner">
-	    <div className="container" id="banner">
-	      <h1 className="logo"> MedMynder  <img src={require("../../images/cell .png")} alt={""} id="cellicon"/> </h1> 
-	    </div>
-	</div>
+	
+<div className="section no-pad-bot" id="index-banner">
+	
+ 	 
+ 	 <br /><br />
+
+ 		 <h1 className="header center" className="logo"> MedMynder </h1>
+		 
+ 		 <br />
+{/* 
+  		<div id="logo2">
+        	<h5 >Putting You in Control Of You Medications.</h5>
+     	 </div> */}
+	
+
+
+
+
+
+
+
+
+
+
+	
+	 </div>
+
+
+
+
+
+
+
+
+
+      
+
+     
+  
+
+
+
+	   
+	     
+	
  );
 
 

@@ -27,12 +27,14 @@ form {
 
 #page {
   text-align: center;
-}
 
-input.validate {
-  color: navy;
+}
+input.validate{
+  color:navy;
 }
 
 #registerform {
   margin-right: 200px;
+   
+    
 }

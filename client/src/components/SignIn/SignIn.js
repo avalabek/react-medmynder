@@ -6,6 +6,7 @@ import { Redirect } from "react-router-dom";
 
 import { FormBtn } from "../Form";
 import Input from "../../components/Input";
+import Footer from "../../components/Footer";
 
 import swal from "sweetalert";
 import Nav from "../../components/Nav"; //importing navbar
@@ -72,12 +73,8 @@ class SignIn extends Component {
                       <div className="col s1" />
                       <div className="col s10">
                         {" "}
-                        <br />
-                        <img
-                          src={require("../../images/loginicon2.png")}
-                          alt={""}
-                          id="icon"
-                        />
+                        <br /><br />
+                      
                         <h5 className="header-center" id="login">
                           {" "}
                           - Log In -{" "}
@@ -98,7 +95,8 @@ class SignIn extends Component {
                         <FormBtn onClick={this.handleFormSubmit}>
                           Sign In
                         </FormBtn>
-                        <h5 className="header-center" id="login">
+                        <br />
+                        <h5 className="header-center" id="login2">
                           {" "}
                           New User? Register Here{" "}
                         </h5>
@@ -114,6 +112,7 @@ class SignIn extends Component {
         <br />
         <br />
         <ImgCard />
+        <Footer />
       </div>
     );
   }

@@ -73,18 +73,20 @@ class Signup extends React.Component {
       return <Redirect to="/profile"/>
     }
     return <div>
+
         <Nav2 />
         <div className="container">
-          <form>
+          <h3 className="text-align center"> - Register - </h3>
+
+          <form id="registerform">
             <br />
             <div className="row">
-              <div className="col s2" />
+              <div className="col s3" />
 
               <div className="col s9">
                 <Input value={this.state.firstName} onChange={this.handleInputChange} name="firstName" label="First name" />
                 <Input value={this.state.lastName} onChange={this.handleInputChange} name="lastName" label="Last name" />
                 <Input value={this.state.phone} onChange={this.handleInputChange} name="phone" label="Phone (ex: 2938202938)" type="tel" />
-
                 <Input value={this.state.dateOfBirth} onChange={this.handleInputChange} name="dateOfBirth" label="Date of birth" />
                 <Input value={this.state.gender} onChange={this.handleInputChange} name="gender" label="Gender" />
                 <Input value={this.state.username} onChange={this.handleInputChange} name="username" label="Username" />

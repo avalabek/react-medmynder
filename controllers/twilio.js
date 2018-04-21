@@ -30,8 +30,10 @@ module.exports = {
     });
 
     // console.log("scheduledJobs", schedule.scheduledJobs);
+
+    const medEntryMessage = "Hi " + userName + "your " + medicine + " has been scheduled.";
     
 
-    sendFunction.sendText(userNumber, twilioNumber, "Initial Test From MedMynder");
+    sendFunction.sendText(userNumber, twilioNumber, medEntryMessage);
   }
 };

@@ -9,7 +9,7 @@ import Input from "../../components/Input";
 // import Jumbotron from "../../components/Jumbotron";
 // import Profile from "../../pages/Profile";
 import API from "../../utils/API"
-import Nav from '../../components/Nav';
+import Nav2 from '../../components/Nav2';
 
 
 class Signup extends React.Component {
@@ -72,79 +72,29 @@ class Signup extends React.Component {
     if (this.state.signedup == "true") {
       return <Redirect to="/profile"/>
     }
-    return (
-      <div>
-      <Nav />
-      <div className="container">
-      <form>
-        
-        <br /> 
-        <div className="row">
-          <div className="col s3" />
+    return <div>
+        <Nav2 />
+        <div className="container">
+          <form>
+            <br />
+            <div className="row">
+              <div className="col s2" />
 
-          <div className="col s9">
-                        
-            <Input
-              value={this.state.firstName}
-              onChange={this.handleInputChange}
-              name="firstName"
-              label="First name"
-            />
-            <Input
-              value={this.state.lastName}
-              onChange={this.handleInputChange}
-              name="lastName"
-              label="Last name"
-            />         
-            <Input
-              value={this.state.phone}
-              onChange={this.handleInputChange}
-              name="phone"
-              label="Phone"
-              type="tel"
+              <div className="col s9">
+                <Input value={this.state.firstName} onChange={this.handleInputChange} name="firstName" label="First name" />
+                <Input value={this.state.lastName} onChange={this.handleInputChange} name="lastName" label="Last name" />
+                <Input value={this.state.phone} onChange={this.handleInputChange} name="phone" label="Phone (ex: 2938202938)" type="tel" />
 
-              />
-                    
-            <Input
-              value={this.state.dateOfBirth}
-              onChange={this.handleInputChange}
-              name="dateOfBirth"
-              label="Date of birth"
-            />
-            <Input 
-              value={this.state.gender}
-              onChange={this.handleInputChange}
-              name="gender"
-              label="Gender"
-            />  
-            <Input
-              value={this.state.username}
-              onChange={this.handleInputChange}
-              name="username"
-              label="Username"
-            />
-            <Input
-              value={this.state.password}
-              onChange={this.handleInputChange}
-              name="password"
-              label="Password"
-              type="password"
-              />
-               
-                 
-           
-          
-          </div>
+                <Input value={this.state.dateOfBirth} onChange={this.handleInputChange} name="dateOfBirth" label="Date of birth" />
+                <Input value={this.state.gender} onChange={this.handleInputChange} name="gender" label="Gender" />
+                <Input value={this.state.username} onChange={this.handleInputChange} name="username" label="Username" />
+                <Input value={this.state.password} onChange={this.handleInputChange} name="password" label="Password" type="password" />
+                <SubmitButton onClick={this.handleFormSubmit} message="Register" />
+              </div>
+            </div>
+          </form>
         </div>
-        <SubmitButton
-        onClick={this.handleFormSubmit} 
-        message="Register"
-        />
-        
-     </form>   
-     </div>
-     </div>
-    );
+      </div>;
   }
 }
 export default Signup;

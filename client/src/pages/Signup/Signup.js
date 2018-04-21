@@ -75,8 +75,10 @@ class Signup extends React.Component {
     return (
       <div>
       <Nav />
-      <div className="container">
-      <form>
+      <div className="container" >
+        <h3 className="text-align center"> - Register - </h3>
+      
+      <form id="registerform" >
         
         <br /> 
         <div className="row">
@@ -139,6 +141,7 @@ class Signup extends React.Component {
         <SubmitButton
         onClick={this.handleFormSubmit} 
         message="Register"
+
         />
         
      </form>   

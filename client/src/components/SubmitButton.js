@@ -6,6 +6,7 @@ export const SubmitButton = props => (
   <button
     {...props}
     className="waves-effect waves-light btn-large"
+
     type="submit"
     name="action"
     style={{ fontFamily: "IBM Plex Sans" }}

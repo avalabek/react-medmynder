@@ -19,28 +19,26 @@
 
 #banner{
 	font-family: 'IBM Plex Sans', sans-serif;
-	text-align: center;
-	margin-bottom: 30px;
+
+
 	
 
 }
 
-#banner2{
-	font-family: 'IBM Plex Sans', sans-serif;
-	text-align: center;
-	margin-top: 0px;
 
-}
 
 .logo{
 	float:right;
-	margin-left: 70px;
+	margin-right: 200px;
+	margin-top: 60px;
 
 }
 
-.logo2{
+#logo2{
 	
-	font-size: 20px;
+	margin-top: 150px;
+	
+	float:right;
 	
 }
 

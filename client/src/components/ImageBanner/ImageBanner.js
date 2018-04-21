@@ -10,11 +10,12 @@ const ImageBanner = ({ children }) => (
  	 <br /><br />
 
  		 <h1 className="header center" className="logo"> MedMynder </h1>
+		 
  		 <br />
-
-  		<div  id="logo2">
+{/* 
+  		<div id="logo2">
         	<h5 >Putting You in Control Of You Medications.</h5>
-     	 </div>
+     	 </div> */}
 	
 
 

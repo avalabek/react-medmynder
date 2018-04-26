@@ -82,14 +82,26 @@ class Signup extends React.Component {
             <Input
               value={this.state.lastName}
               onChange={this.handleInputChange}
+              type="text"
               name="lastName"
               label="Last name"
+              htmlFor="lastName"
+              className="validate"
             />         
             <Input
               value={this.state.phone}
               onChange={this.handleInputChange}
               name="phone"
               label="Phone"
+              id="icon_telepone"
+              type="tel"
+              className="validate"
+              data-error="wrong"
+              data-success="right"
+              required="" 
+              aria-required="true"
+              htmlFor="phone"
+              type="text"
               />
                     
             <Input
@@ -97,17 +109,20 @@ class Signup extends React.Component {
               onChange={this.handleInputChange}
               name="dateOfBirth"
               label="Date of birth"
+              type="text"
             />
             <Input 
               value={this.state.gender}
               onChange={this.handleInputChange}
               name="gender"
+              type="text"
               label="Gender"
             />  
             <Input
               value={this.state.username}
               onChange={this.handleInputChange}
               name="username"
+              type="text"
               label="Username"
             />
             <Input
@@ -115,12 +130,14 @@ class Signup extends React.Component {
               onChange={this.handleInputChange}
               name="password"
               label="Password"
+              type="password"
               /> 
                  
            
           
           </div>
         </div>
+        
         <SubmitButton
         onClick={this.handleFormSubmit} 
         message="Register"

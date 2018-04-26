@@ -7,7 +7,7 @@ const Nav = () => (
     <nav>
       <div className="nav-wrapper header">
         <a href="/" data-target="mobile-demo" className="sidenav-trigger">
-          <i class="material-icons">menu</i>
+          <i className="material-icons">menu</i>
         </a>
         <Link to="/" className="brand-logo center" />
         Med<strong>MY</strong>nder<a>

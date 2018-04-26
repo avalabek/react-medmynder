@@ -4,8 +4,11 @@ This app is still currently being developed. We have deployed the MVP to heroku 
 
 https://medmynder.herokuapp.com
 
-but you can clone it onto your machine and view it using the steps below. If you just want to see a video walkthrough of how it works: 
+ If you just want to see a video walkthrough of how it works: 
 
+![demo](https://user-images.githubusercontent.com/31053210/39287618-71b304e8-48d9-11e8-8909-62989d3ef9bb.gif)
+
+Or, if you like, you can clone it to your machine and view it using the steps below.
 ![Register](registerimage.png "Register")
 
 

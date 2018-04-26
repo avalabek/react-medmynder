@@ -1,13 +1,17 @@
 # MedMYnder
 
-This app is currently in development but you can clone it onto your machine and view it using the steps below. 
+This app is still currently being developed. We have deployed the MVP to heroku and you can view it on the following link:
+
+https://medmynder.herokuapp.com
+
+but you can clone it onto your machine and view it using the steps below. If you just want to see a video walkthrough of how it works: 
 
 ![Register](registerimage.png "Register")
 
 
 ## Starting the app locally
 
-Please note that the most complete branch to work with at the moment of writing is called ravi. Please checkout this branch in order to proceed with these steps.
+Please note that the most complete branch to work with at the moment of writing is called "april19". Please checkout this branch in order to proceed with these steps.
 
 First make sure you have 
 ```
@@ -37,4 +41,4 @@ yarn start
 ```
 
 That's it, our app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
+ 

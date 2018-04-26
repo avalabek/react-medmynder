@@ -9,8 +9,6 @@ https://medmynder.herokuapp.com
 ![demo](https://user-images.githubusercontent.com/31053210/39287618-71b304e8-48d9-11e8-8909-62989d3ef9bb.gif)
 
 Or, if you like, you can clone it to your machine and view it using the steps below.
-![Register](registerimage.png "Register")
-
 
 ## Starting the app locally
 
@@ -45,3 +43,4 @@ yarn start
 
 That's it, our app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
  
+![Register](registerimage.png "Register")
